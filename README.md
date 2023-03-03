@@ -38,7 +38,7 @@ flowchart TD
 | /delete/:id  | Create  |             | todoDeleteAction | Handle submission of a delete form for todos   |
 
 #### Model
-![ERD Diagram](https://i.imgur.com/Heyawax.png)
+![ERD Diagram]()
 
 #### User Stories
 - As a user, I can see a list of my todos.
@@ -49,7 +49,7 @@ flowchart TD
 
 #### Wireframes
 ##### Mobile
-![Mobile Todo List](https://i.imgur.com/IZNmn9Z.png)
+![Mobile Todo List]()
 
 ##### Desktop
 
