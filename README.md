@@ -41,11 +41,11 @@ flowchart TD
 ![ERD Diagram]()
 
 #### User Stories
-- As a user, I can see a list of my todos.
-- As a user, I can see a specific todo.
-- As a user, I can create a new todo.
-- As a user, I can update a todo.
-- As a user, I can delete a todo.
+- As a user, I can see a list of
+- As a user, I can see a specific
+- As a user, I can create a new
+- As a user, I can update a
+- As a user, I can delete a
 
 #### Wireframes
 ##### Mobile
