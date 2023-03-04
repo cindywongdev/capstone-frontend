@@ -1,6 +1,6 @@
-# App Name
+# Leftover
 <!-- Github Intro -->
-Welcome to Leftover - the innovative app designed to connect restaurants with surplus food to those in need. Our platform uses a Django backend and PostgreSQL database, with a Vue frontend, to make it easy for restaurants to list available food, while nearby groups can arrange for pickup. Users can search for local donations, making it simple to find nutritious meals that might otherwise go to waste. By reducing food waste and providing meals to those in need, Leftover is on the frontlines of fighting hunger and supporting communities. Join us today and help make a difference in the lives of people struggling with food insecurity.
+Welcome to Leftover - the innovative app designed to connect restaurants with surplus food to those in need. Our platform uses a Django backend, PostgreSQL database, and a Vue frontend. Leftover makes it easy for restaurants to list available food, while nearby groups can arrange for pickup. Users can search for local donations, making it simple to find nutritious meals that might otherwise go to waste. By reducing food waste and providing meals to those in need, Leftover is on the frontlines of fighting hunger and supporting communities. Join us today and help make a difference in the lives of people struggling with food insecurity.
 
 
 <!-- Marketing Intro -->
@@ -14,7 +14,7 @@ Leftover is a win-win solution for restaurants and the community. Restaurants ca
 
 Join the Leftover community today and help us make a difference in the fight against hunger. -->
 
-Deployed Website Link
+[Leftover Deployed Site]()
 
 #### Technologies Used
 
@@ -64,20 +64,24 @@ flowchart TD
 
 #### User Stories
 ##### Provider Accounts
-- AAU, I can login and logout to my account as a providing restaurant.
+- AAU, I can login to and logout from my account as a providing restaurant.
 - AAU, I can see a list of available foods from all restaurants.
 - AAU, I can see a list of available foods from my own restaurant.
 - AAU, I can see a specific food from a specific restaurant.
 - AAU, I can create a new food listing.
 - AAU, I can update a food listing.
 - AAU, I can delete a food listing.
+- AAU, I can view requests for my food listings.
+- AAU, I can accept or deny these requests, and the amount will reflect on my listing.
+- AAU, the listing will be deemed expired when either 1) the food has expired or 2) all the food has been given away.
+- AAU, I can reopen an expired listing if someone did not come pick up their requested food.
 
 
 ##### Food Seeker Accounts
-- AAU, I can login and logout to my account as an organization/individual seeking food.
+- AAU, I can login to and logout from my account as an organization/individual seeking food.
 - AAU, I can see a list of available foods from all restaurants.
 - AAU, I can see a specific food from a specific restaurant.
-- AAU, I can contact the providing restaurant.
+- AAU, I can request food from the providing restaurant.
 
 #### Wireframes
 ##### Mobile
@@ -89,12 +93,12 @@ flowchart TD
 | Date | Task |
 |------|------|
 |   03/4   |  Get Project Approved  |
-|   03/5-3/7   |  <ul><li>Make more detailed mockups of each page for web and mobile</li><li>Create Django backend shell and deploy</li></ul>  |
+|   03/5-3/7   |  <ul><li>Decide on color scheme and main fonts</li><li>Make more detailed mockups of each page for web and mobile</li><li>Create Django backend shell and deploy</li></ul>  |
 |   3/8   |  One day project w/ Vue  |
 |   3/9   |  One day project w/ Tailwind (with Vue) |
-|   3/10-3/16   | <ul><li>Create Vue frontend shell and deploy</li><li>Achieve full CRUD for Providers</li></ul> |
-|   3/17-3/23   |  |
-|   3/24-3/30  |  |
+|   3/10-3/16   | <ul><li>Create Vue frontend shell and deploy (1 day)</li><li>Achieve full CRUD for Providers (2 days)</li><li>Style app to be both Web and Mobile Responsive (3 days)</li><li>Integrate Food API into app (1 day)</li></ul> |
+|   3/17-3/23   | <ul><li>Add Oauth (3 days) </li><li>Distinguish between provider and seeker accounts</li><li>Add frontend routes for Seekers (Account page, Food request form) (1 day)</li></ul> |
+|   3/24-3/30  | <ul><li></li></ul> |
 |   3/31   | Practice presentation |
 |   4/1    | Present! :) |
 
