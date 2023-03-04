@@ -22,7 +22,7 @@ Deployed Website Link
 - Python
 - Django
 - PostgreSQL
-- Food API (Edamam probably)
+- Food API (Edamam or Spoonacular probably)
 - Jira
 
 ##### Frontend
@@ -42,13 +42,15 @@ flowchart TD
     App --> Outlet
     App --> Footer
     Header --> Nav
-    Nav --> id1[Today's Note]
-    Nav --> id2[All Notes]
-    Outlet --> id3[url]
-    Outlet --> id4[url]
-    Outlet --> id5[url]
-    Outlet --> id6[url]
-    Outlet --> id7[url]
+    Nav --> id1[View Available Food]
+    Nav --> id2[ Give Food ]
+    Nav --> id8[ My Account ]
+    Nav --> id9[ Logout ]
+    Outlet --> id3["/listings"]
+    Outlet --> id4["/listing:id"]
+    Outlet --> id5["/create"]
+    Outlet --> id6["/update/:id"]
+    Outlet --> id7["/delete/:id"]
 ```
 
 #### Frontend Route Table
@@ -59,9 +61,6 @@ flowchart TD
 | /create      | Create  |       | listingCreateAction | Handle submission of a create form for listings  |
 | /update/:id  | Create  |       | listingUpdateAction | Handle submission of an update form for listings |
 | /delete/:id  | Create  |       | listingDeleteAction | Handle submission of a delete form for listings  |
-
-#### Model
-![ERD Diagram]()
 
 #### User Stories
 ##### Provider Accounts
