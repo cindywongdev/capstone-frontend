@@ -24,6 +24,10 @@ Join the Leftover community today and help us make a difference in the fight aga
 - PostgreSQL
 - Food API (Edamam or Spoonacular probably)
 - Jira
+<!-- possible APIs
+https://developer.nutritionix.com/
+https://open.fda.gov/
+https://developer.edamam.com/edamam-docs-nutrition-api#/ -->
 
 ##### Frontend
 - Vue
