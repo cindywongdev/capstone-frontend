@@ -82,6 +82,7 @@ flowchart TD
 - AAU, I can see a list of available foods from all restaurants.
 - AAU, I can see a specific food from a specific restaurant.
 - AAU, I can request food from the providing restaurant.
+- AAU, I can see if my request was approved or denied.
 
 #### Wireframes
 ##### Mobile
