@@ -90,7 +90,12 @@ flowchart TD
 
 #### Wireframes
 ##### Mobile
-![]()
+![Landing Page]()
+
+
+##### Web
+![Landing Page]()
+
 
 ##### Desktop
 
