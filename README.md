@@ -103,12 +103,14 @@ flowchart TD
 | Date | Task |
 |------|------|
 |   03/4   |  Get Project Approved  |
-|   03/5-3/7   |  <ul><li>Decide on color scheme and main fonts</li><li>Make more detailed mockups of each page for web and mobile</li><li>Create Django backend shell and deploy</li></ul>  |
-|   3/8   |  One day project w/ Vue  |
-|   3/9   |  One day project w/ Tailwind (with Vue) |
-|   3/10-3/16   | <ul><li>Create Vue frontend shell and deploy (1 day)</li><li>Achieve full CRUD for Providers (2 days)</li><li>Style app to be both Web and Mobile Responsive (3 days)</li><li>Integrate Food API into app (1 day)</li></ul> |
-|   3/17-3/23   | <ul><li>Add Oauth (3 days) </li><li>Distinguish between provider and seeker accounts</li><li>Add frontend routes for Seekers (Account page, Food request form) (1 day)</li></ul> |
-|   3/24-3/30  | <ul><li></li></ul> |
+|   03/5-3/7   |  <ul><li>Decide on color scheme and main fonts</li><li>Make site logo</li><li>Make more detailed mockups of each page for web and mobile</li><li>Start Django backend</li></ul>  |
+|   3/8   |  Rest  |
+|   3/9   |  <ul><li>Add second model</li><li>Deploy backend</li><li>Start Vue Todo project</li></ul> |
+|   3/10  | Finish Vue Todo project |
+|   3/11  | 1-day TailwindxVue project |
+|   3/12-3/18   | <ul><li>Create Vue frontend shell and deploy (1 day)</li><li>Achieve full CRUD for Providers (2 days)</li><li>Style app to be both Web and Mobile Responsive (3 days)</li><li>Integrate Food API into app (1 day)</li></ul> |
+|   3/19-3/25   | <ul><li>Add Oauth (3 days) </li><li>Distinguish between provider and seeker accounts</li><li>Add frontend routes for Seekers (Account page, Food request form) (1 day)</li></ul> |
+|   3/26-3/30  | <ul><li></li></ul> |
 |   3/31   | Practice presentation |
 |   4/1    | Present! :) |
 
