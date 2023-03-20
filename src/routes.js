@@ -11,7 +11,7 @@ import Form from './pages/Form.vue'
 export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { path: "/", component: AllListings, props: true },
-    { path: "/listing/:id", component: SingleListing, props: true },
+    { path: "/listing/:id", name:'listing', component: SingleListing, props: true },
     { path: "/create", component: Form },
     { path: "/update/:id", component: Form }
 ]
