@@ -1,10 +1,28 @@
 <template>
   <div>
-    <router-view/>
+    <!-- pass props to routes -->
+    <router-view :listings="listings" :url="url" :getListings="getListings"/>
   </div>
 </template>
 
 <script setup>
+import { ref, onBeforeMount } from "vue"
+
+// import base url using import.meta.env obj
+const url = import.meta.env.VITE_API_BASE_URL
+
+// create state for listings
+const listings = ref([])
+
+// create method to get listings
+const getListings = async function(){
+  const response = await fetch(url)
+  const data = await response.json()
+  listings.value = await data
+}
+
+// call the method before the component mounts
+onBeforeMount(() => getListings())
 
 </script>
 
