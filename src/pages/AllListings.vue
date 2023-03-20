@@ -1,8 +1,14 @@
 <template>
     <div>
         <h1 class="text-amber-400 text-3xl font-bold">All Listings</h1>
-        <section>
-                <ListingCard v-for="listing of listings" :key="listing.id" :listing="listing"/>
+        <section class="
+            container
+            grid
+            gap-4
+            mx-auto
+            mt-4
+            px-4">
+            <ListingCard v-for="listing of listings" :key="listing.id" :listing="listing" />
         </section>
     </div>
 </template>
@@ -15,8 +21,4 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss" scoped>
-img {
-    width: 300px;
-}
-</style>
+<style lang="scss" scoped></style>
