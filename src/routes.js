@@ -13,6 +13,6 @@ export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { path: "/", component: AllListings, props: true },
     { path: "/listing/:id", name:'listing', component: SingleListing, props: true },
-    { path: "/create", component: NewPage },
-    { path: "/update/:id", component: EditPage }
+    { path: "/create", component: NewPage, props: true },
+    { path: "/update/:id", name: "edit", component: EditPage, props: true }
 ]

@@ -18,6 +18,8 @@
         <h2>{{ listing.num_servings }}</h2>
         <h2>{{ listing.pickup_by_time }}</h2>
         <h2>{{ listing.restaurant }}</h2>
+
+        <router-link :to="{ name: 'edit', params: { id: listing.id } }"><button class="bg-green-500 p-2 rounded-md">Edit Listing</button></router-link>
     </div>
 </template>
 
