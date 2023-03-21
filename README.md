@@ -90,7 +90,7 @@ flowchart TD
 
 #### Wireframes
 ##### Mobile
-![Landing Page]()
+![All Listings Page](https://i.imgur.com/VGmznXv.png)
 
 
 ##### Web
