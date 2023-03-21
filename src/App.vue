@@ -9,7 +9,8 @@
 import { ref, onBeforeMount } from "vue"
 
 // import base url using import.meta.env obj
-const url = import.meta.env.VITE_API_BASE_URL
+const { VITE_API_BASE_URL } = import.meta.env
+const url = VITE_API_BASE_URL
 
 // create state for listings
 const listings = ref([])
