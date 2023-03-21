@@ -3,7 +3,8 @@
 /////////////////////////
 import AllListings from './pages/AllListings.vue'
 import SingleListing from './pages/SingleListing.vue'
-import Form from './pages/Form.vue'
+import NewPage from './pages/NewPage.vue'
+import EditPage from './pages/EditPage.vue'
 
 /////////////////////////
 // Array of Routes
@@ -12,6 +13,6 @@ export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { path: "/", component: AllListings, props: true },
     { path: "/listing/:id", name:'listing', component: SingleListing, props: true },
-    { path: "/create", component: Form },
-    { path: "/update/:id", component: Form }
+    { path: "/create", component: NewPage },
+    { path: "/update/:id", component: EditPage }
 ]
