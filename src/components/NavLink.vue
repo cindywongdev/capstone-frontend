@@ -6,6 +6,8 @@
         rounded-sm
         ring-offset-4
         ring-offset-white
+        hover:opacity-70
+        transition-opacity
     ">{{ text }}</a>
 </template>
 

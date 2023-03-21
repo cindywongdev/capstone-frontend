@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-green': '#ddedaa'
+        'light-green': '#ddedaa',
+        'dark-green': '#2b4141'
+      },
+      width: {
+        '88': '21rem'
       },
       fontFamily: {
         'quicksand': ['Quicksand']

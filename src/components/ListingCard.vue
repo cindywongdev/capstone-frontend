@@ -12,18 +12,14 @@
                 shadow-lg
                 p-3
                 mx-auto
-                w-80
+                w-88
                 h-44        
             ">
 
             <!-- div for text -->
             <div>
                 <h2>{{ listing.restaurant }}</h2>
-                <h1 class="
-                    border-4
-                    border-blue-500
-                    w-max
-                ">{{ listing.food_name }}</h1>
+                <h1>{{ listing.food_name }}</h1>
                 <h2>servings left</h2>
                 <h1>{{ listing.num_servings }}</h1>
                 <h2>pickup by</h2>

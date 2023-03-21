@@ -6,6 +6,7 @@
             flex
             justify-between
             items-center
+            px-3
         ">
 
         <Logo></Logo>

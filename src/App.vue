@@ -1,9 +1,11 @@
 <template>
-  <body class="mx-auto">
+  <body>
     <!-- <Test></Test> -->
     <Nav></Nav>
     <!-- pass props to routes -->
-    <router-view :listings="listings" :url="url" :getListings="getListings"/>
+    <main class="p-4 md:p-8 max-w-3xl mx-auto">
+      <router-view :listings="listings" :url="url" :getListings="getListings"/>
+    </main>
   </body>
 </template>
 

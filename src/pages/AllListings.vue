@@ -1,13 +1,23 @@
 <template>
     <div>
-        <h1 id="listings" class="text-amber-400 text-3xl font-bold">All Listings</h1>
+        <div class="
+            flex
+            justify-between
+            items-center
+            px-3
+            ">
+            <h1 id="listings" class="text-dark-green text-xl uppercase">All Listings</h1>
 
-        <router-link to="/create"><button class="
-        bg-green-500
-        p-2
-        m-2
-        mt-0
-        rounded-md">Create New Listing</button></router-link>
+            <router-link to="/create" class="
+                bg-light-green
+                rounded-full
+                p-1
+            ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </router-link>
+        </div>
 
         <section class="
             container
@@ -17,7 +27,6 @@
             gap-6
             mx-auto
             mt-4
-            px-4
             max-w-3xl
             "
             aria-labelledby="listings">
