@@ -1,6 +1,14 @@
 <template>
     <div>
         <h1 id="listings" class="text-amber-400 text-3xl font-bold">All Listings</h1>
+
+        <router-link to="/create"><button class="
+        bg-green-500
+        p-2
+        m-2
+        mt-0
+        rounded-md">Create New Listing</button></router-link>
+
         <section class="
             container
             grid

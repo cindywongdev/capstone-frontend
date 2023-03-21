@@ -94,15 +94,9 @@ if (route.name === "edit") {
     console.log("THIS IS THE EDIT ROUTE")
     // get listing
     const listing = listings.value.find((listing) => {return listing.id == route.params.id})
-    console.log(listings)
-    console.log(listings.value)
-    console.log(listing)
-    console.log(route.params.id)
 
     // fill form with that listing's values
     food_name.value = listing.food_name
-    console.log(food_name)
-    console.log(listing.food_name)
     img.value = listing.img
     ingredients.value = listing.ingredients
     allergens.value = listing.allergens
@@ -143,7 +137,38 @@ if (route.name === "edit") {
     console.log("CREATE ROUTE REACHED")
 
     // label for submit button
-    const buttonLabel = "Create Listing"
+    buttonLabel = "Create Listing"
+
+    // define function to create
+    handleSubmit = async () => {
+        // wrap ingredients and allergens in an array to fit data model
+        ingredients.value = [].concat(ingredients.value)
+        console.log(ingredients.value)
+        allergens.value = [].concat(allergens.value)
+        console.log(allergens.value)
+
+        await fetch(url.value, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                food_name: food_name.value,
+                img: img.value,
+                ingredients: ingredients.value,
+                allergens: allergens.value,
+                good_for_x_days: good_for_x_days.value,
+                num_servings: num_servings.value,
+                pickup_by_time: pickup_by_time.value,
+                restaurant: restaurant.value
+            }) 
+        })
+
+        // update all listings
+        await getListings.value()
+        // redirect to listings
+        router.push("/")
+    }
 }
 
 </script>
