@@ -11,12 +11,15 @@
 
         <section class="
             container
-            grid
-            place-items-center
-            gap-4
+            flex
+            flex-wrap
+            justify-center
+            gap-6
             mx-auto
             mt-4
-            px-4"
+            px-4
+            max-w-3xl
+            "
             aria-labelledby="listings">
             <ListingCard v-for="listing of listings" :key="listing.id" :listing="listing" />
         </section>

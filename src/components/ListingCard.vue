@@ -11,9 +11,8 @@
                 rounded-lg
                 p-3
                 mx-auto
-                w-96
-                md:max-w-lg
-                lg:max-w-2xl
+                w-80
+                h-44        
             ">
 
             <!-- div for text -->
@@ -32,6 +31,10 @@
 
             <!-- div for arrow icon and image -->
             <div class="
+                flex
+                flex-col
+                items-end
+                justify-between
                 w-1/2
             ">
                 <h1>Arrow Icon</h1>
@@ -39,10 +42,12 @@
                 <div class="
                     border-4
                     border-green-400
-                
+    
                 ">
                     <img :src="listing.img" :alt="listing.food_name" class="
                         object-cover
+                        w-28
+                        h-28
                     " />
                 </div>
             </div>
