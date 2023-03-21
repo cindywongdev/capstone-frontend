@@ -13,17 +13,25 @@
                 p-3
                 mx-auto
                 w-88
-                h-44        
+                h-48        
             ">
 
             <!-- div for text -->
-            <div>
-                <h2>{{ listing.restaurant }}</h2>
-                <h1>{{ listing.food_name }}</h1>
-                <h2>servings left</h2>
-                <h1>{{ listing.num_servings }}</h1>
-                <h2>pickup by</h2>
-                <h1>{{ pickupTime }}</h1>
+            <div class="grid place-content-between">
+                <div>
+                    <h2 class="uppercase text-sm font-medium text-dark-green">{{ listing.restaurant }}</h2>
+                    <h1 class="text-xl font-medium">{{ listing.food_name }}</h1>
+                </div>
+
+                <div>
+                    <h2 class="uppercase text-sm font-medium text-dark-green">servings left</h2>
+                    <h1 class="text-lg">{{ listing.num_servings }}</h1>
+                </div>
+
+                <div>
+                    <h2 class="uppercase text-sm font-medium text-dark-green">pickup by</h2>
+                    <h1 class="text-lg">{{ pickupTime }}</h1>
+                </div>
             </div>
 
             <!-- div for arrow icon and image -->
@@ -34,13 +42,17 @@
                 justify-between
                 w-1/2
             ">
-                <h1>Arrow Icon</h1>
+                <div class="bg-light-green rounded-full p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>
+                </div>
 
                 <div>
                     <img :src="listing.img" :alt="listing.food_name" class="
                         object-cover
-                        w-28
-                        h-28
+                        w-30
+                        h-30
                         rounded-md
                     " />
                 </div>

@@ -34,4 +34,7 @@ onBeforeMount(() => getListings())
 </script>
 
 <style scoped>
+* {
+    font-family: 'Quicksand';
+}
 </style>

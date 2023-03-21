@@ -11,10 +11,11 @@ module.exports = {
         'dark-green': '#2b4141'
       },
       width: {
+        '30': '7.5rem',
         '88': '21rem'
       },
-      fontFamily: {
-        'quicksand': ['Quicksand']
+      height: {
+        '30': '7.5rem'
       }
     },
   },

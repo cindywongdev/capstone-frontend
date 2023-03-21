@@ -6,7 +6,7 @@
             items-center
             px-3
             ">
-            <h1 id="listings" class="text-dark-green text-xl uppercase">All Listings</h1>
+            <h1 id="listings" class="text-dark-green text-xl uppercase font-medium">All Listings</h1>
 
             <router-link to="/create" class="
                 bg-light-green
