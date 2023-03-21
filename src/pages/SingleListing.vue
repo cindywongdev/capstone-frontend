@@ -21,7 +21,7 @@
 
         <router-link :to="{ name: 'edit', params: { id: listing.id } }"><button class="bg-green-500 p-2 m-2 rounded-md">Edit Listing</button></router-link>
 
-        <button v-on:click="deletePost" class="bg-green-500 p-2 rounded-md">Delete Listing</button>
+        <button v-on:click="deletePost" class="bg-red-500 p-2 rounded-md">Delete Listing</button>
         
     </div>
 </template>

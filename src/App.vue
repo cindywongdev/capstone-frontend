@@ -27,5 +27,4 @@ onBeforeMount(() => getListings())
 </script>
 
 <style scoped>
-
 </style>

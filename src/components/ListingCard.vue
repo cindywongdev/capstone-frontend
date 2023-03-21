@@ -1,15 +1,15 @@
 <template>
     <!-- entire card div -->
-    <router-link :to="{ name: 'listing', params: { id: listing.id } }" class="w-max">
+    <router-link :to="{ name: 'listing', params: { id: listing.id } }" class="w-max hover:bg-neutral-100 transition-colors">
         <div class="
-                border-4
-                border-red-400
-    
                 container
                 flex
                 justify-between
-                p-2
-            
+
+                border
+                border-neutral-600
+                rounded-lg
+                p-3
                 mx-auto
                 w-96
                 md:max-w-lg
