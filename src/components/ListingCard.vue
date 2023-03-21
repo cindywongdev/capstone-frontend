@@ -36,15 +36,12 @@
             ">
                 <h1>Arrow Icon</h1>
 
-                <div class="
-                    border-4
-                    border-green-400
-    
-                ">
+                <div>
                     <img :src="listing.img" :alt="listing.food_name" class="
                         object-cover
                         w-28
                         h-28
+                        rounded-md
                     " />
                 </div>
             </div>
