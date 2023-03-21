@@ -19,7 +19,10 @@
         <h2>{{ listing.pickup_by_time }}</h2>
         <h2>{{ listing.restaurant }}</h2>
 
-        <router-link :to="{ name: 'edit', params: { id: listing.id } }"><button class="bg-green-500 p-2 rounded-md">Edit Listing</button></router-link>
+        <router-link :to="{ name: 'edit', params: { id: listing.id } }"><button class="bg-green-500 p-2 m-2 rounded-md">Edit Listing</button></router-link>
+
+        <button v-on:click="deletePost" class="bg-green-500 p-2 rounded-md">Delete Listing</button>
+        
     </div>
 </template>
 
@@ -43,6 +46,17 @@ const { listings, url, getListings } = toRefs(props)
 // grab target listing
 const listing = listings.value.find((listing) => listing.id == route.params.id)
 console.log(listings.value)
+
+const deletePost = async function() {
+    await fetch(url.value + listing.id + "/", {
+        method: "delete",
+    })
+
+    // update all listings page
+    await getListings.value()
+    // redirect
+    router.push("/")
+}
 
 </script>
 

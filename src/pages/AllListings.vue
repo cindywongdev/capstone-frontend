@@ -12,6 +12,7 @@
         <section class="
             container
             grid
+            place-items-center
             gap-4
             mx-auto
             mt-4

@@ -1,6 +1,6 @@
 <template>
     <!-- entire card div -->
-    <router-link :to="{ name: 'listing', params: { id: listing.id } }">
+    <router-link :to="{ name: 'listing', params: { id: listing.id } }" class="w-max">
         <div class="
                 border-4
                 border-red-400
@@ -11,7 +11,7 @@
                 p-2
             
                 mx-auto
-                max-w-sm
+                w-96
                 md:max-w-lg
                 lg:max-w-2xl
             ">
