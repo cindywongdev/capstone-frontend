@@ -1,12 +1,16 @@
 <template>
-  <div>
+  <body class="mx-auto">
+    <!-- <Test></Test> -->
+    <Nav></Nav>
     <!-- pass props to routes -->
     <router-view :listings="listings" :url="url" :getListings="getListings"/>
-  </div>
+  </body>
 </template>
 
 <script setup>
+import Test from "./components/Test.vue";
 import { ref, onBeforeMount } from "vue"
+import Nav from './components/Nav.vue'
 
 // import base url using import.meta.env obj
 const { VITE_API_BASE_URL } = import.meta.env

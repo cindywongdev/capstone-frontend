@@ -5,10 +5,11 @@
                 container
                 flex
                 justify-between
-
                 border
                 border-neutral-600
                 rounded-lg
+                bg-white
+                shadow-lg
                 p-3
                 mx-auto
                 w-80
