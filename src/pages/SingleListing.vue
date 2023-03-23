@@ -100,8 +100,23 @@
         </div>
     </div>
 
-    <footer>
-        <router-link to="/"><button class="bg-green-500 p-2 rounded-md">Back to Listings</button></router-link>
+    <footer class="
+        flex
+        justify-between
+        items-center
+        absolute
+        left-0
+        mt-4
+        px-4
+        w-screen
+        h-16 
+        bg-light-green">
+        <router-link to="/"><button class="bg-dark-green p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+        </button></router-link>
+        <button class="bg-dark-green pt-1 py-2 px-4 rounded-lg text-2xl text-white">request</button>
     </footer>
 
 </template>
