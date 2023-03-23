@@ -1,5 +1,12 @@
 <template>
-    <nav class="bg-light-green">
+    <nav class="
+        bg-light-green
+        fixed
+        top-0
+        left-0
+        w-full
+        z-50
+        ">
         <div class="
             container
             mx-auto

@@ -1,9 +1,11 @@
 <template>
   <body>
     <!-- <Test></Test> -->
-    <Nav></Nav>
+    <header>
+      <Nav></Nav>
+    </header>
     <!-- pass props to routes -->
-    <main class="p-4 md:p-8 max-w-3xl mx-auto">
+    <main class="p-4 md:p-8 max-w-3xl mx-auto mt-24">
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
   </body>
@@ -29,16 +31,21 @@ const getListings = async function(){
 }
 
 // call the method before the component mounts
-onBeforeMount(() => getListings())
+onBeforeMount(() => {
+  getListings()
 
-onMounted(() => {
-  // This prevents the page from scrolling down to where it was previously.
-  if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-  }
-  // This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
-  window.scrollTo(0,0);
+  // window.scroll({
+  //   top: 0, 
+  //   left: 0, 
+  //   behavior: 'smooth' 
+  //   });
 })
+
+// how to scroll back to top of page automatically?
+
+// onMounted(() => {
+  
+// })
 
 </script>
 
