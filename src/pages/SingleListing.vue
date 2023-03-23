@@ -14,7 +14,7 @@
             <div>
                 <ShowPgSubheading :text="listing.restaurant"/>
                 <h1 class="text-3xl mb-2">{{ listing.food_name }}</h1>
-                <h2>{{ listing.listing_date }}</h2>
+                <h2>listed on {{ listing.listing_date }}</h2>
             </div>
 
             <div>
@@ -76,26 +76,26 @@
         <img :src="listing.img" :alt="listing.food_name" class="w-full px-2 h-80 object-cover"/>
 
         <!-- second div for rest of text -->
-        <div class="w-full pl-2 grid gap-3">
+        <div class="w-full pl-2 grid gap-4">
             <div>
                 <ShowPgSubheading text="ingredients"/>
-                <h2>{{ listing.ingredients }}</h2>
+                <h2 v-for="ingredient of ingredients" class="text-lg">{{ ingredient }}</h2>
             </div>
             <div>
                 <ShowPgSubheading text="allergens"/>
-                <h2>{{ listing.allergens }}</h2>
+                <h2 v-for="allergen of allergens" class="text-lg">{{ allergen }}</h2>
             </div>
             <div>
                 <ShowPgSubheading text="still good for"/>
-                <h2>{{ listing.good_for_x_days }} more days</h2>
+                <h2 class="text-lg">{{ listing.good_for_x_days }} more days</h2>
             </div>
             <div>
                 <ShowPgSubheading text="servings left"/>
-                <h2>{{ listing.num_servings }}</h2>
+                <h2 class="text-2xl">{{ listing.num_servings }}</h2>
             </div>
             <div>
                 <ShowPgSubheading text="pickup by"/>
-                <h2>{{ listing.pickup_by_time }}</h2>
+                <h2 class="text-2xl">{{ listing.pickup_by_time }}</h2>
             </div>
         </div>
     </div>
@@ -123,6 +123,15 @@ export default {
         'getListings': Function
     },
     setup(props) {
+        function checkArrLength (arr){
+            console.log(arr.length)
+            if ((arr.length === 1 && arr[0] === "") || arr.length === 0) {
+                return ["n/a"]
+            } else {
+                return arr
+            }
+        }
+
         // get router to use router.push
         const router = useRouter()
         // get route obj to access params
@@ -131,13 +140,18 @@ export default {
         const { listings, url, getListings } = toRefs(props)
         // grab target listing
         const listing = listings.value.find((listing) => listing.id == route.params.id)
-        console.log(listings.value)
+        // check length of ingredients & allergens arrays
+        const ingredients = checkArrLength(listing.ingredients)
+        const allergens = checkArrLength(listing.allergens)
+        
         return {
             router,
             route,
             listing,
             url,
-            getListings
+            getListings,
+            ingredients,
+            allergens
         }
     },
     // define data (isActive variable)
