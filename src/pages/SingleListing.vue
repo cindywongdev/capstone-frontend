@@ -95,7 +95,7 @@
             </div>
             <div>
                 <ShowPgSubheading text="pickup by"/>
-                <h2 class="text-2xl">{{ listing.pickup_by_time }}</h2>
+                <h2 class="text-2xl">{{ pickupTime }}</h2>
             </div>
         </div>
     </div>
@@ -110,6 +110,7 @@
 import { useRoute, useRouter } from 'vue-router' // get useroute hook to access route params
 import { toRefs } from 'vue'; // get toRefs hook to maintain props reactivity
 import ShowPgSubheading from '../components/ShowPgSubheading.vue';
+import moment from 'moment';
 
 export default {
     name: "SingleListing",
@@ -143,6 +144,8 @@ export default {
         // check length of ingredients & allergens arrays
         const ingredients = checkArrLength(listing.ingredients)
         const allergens = checkArrLength(listing.allergens)
+        // format date string using moment
+        const pickupTime = moment(listing.pickup_by_time).format("M/D/YY @h:mma")
         
         return {
             router,
@@ -151,7 +154,8 @@ export default {
             url,
             getListings,
             ingredients,
-            allergens
+            allergens,
+            pickupTime
         }
     },
     // define data (isActive variable)
