@@ -106,7 +106,7 @@
         items-center
         absolute
         left-0
-        mt-4
+        mt-6
         px-4
         w-screen
         h-16 

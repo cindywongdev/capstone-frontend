@@ -11,7 +11,7 @@
 
 <script setup>
 import Test from "./components/Test.vue";
-import { ref, onBeforeMount } from "vue"
+import { ref, onBeforeMount, onMounted } from "vue"
 import Nav from './components/Nav.vue'
 
 // import base url using import.meta.env obj
@@ -30,6 +30,15 @@ const getListings = async function(){
 
 // call the method before the component mounts
 onBeforeMount(() => getListings())
+
+onMounted(() => {
+  // This prevents the page from scrolling down to where it was previously.
+  if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+  }
+  // This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
+  window.scrollTo(0,0);
+})
 
 </script>
 
