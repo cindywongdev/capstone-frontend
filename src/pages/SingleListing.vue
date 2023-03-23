@@ -7,6 +7,7 @@
                 items-center
                 justify-center
                 gap-4
+                mb-20
                 ">
 
         <!-- top div for text and options button-->
@@ -104,9 +105,9 @@
         flex
         justify-between
         items-center
-        absolute
+        fixed
+        bottom-0
         left-0
-        mt-6
         px-4
         w-screen
         h-16 
