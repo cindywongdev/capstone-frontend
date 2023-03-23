@@ -1,5 +1,5 @@
 <template>
-    <a :href="path" class="
+    <router-link :to="path" class="
         focus:outline-none
         focus-visible:ring-2
         ring-neutral-900
@@ -8,7 +8,7 @@
         ring-offset-white
         hover:opacity-70
         transition-opacity
-    ">{{ text }}</a>
+    ">{{ text }}</router-link>
 </template>
 
 <script setup>
