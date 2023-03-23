@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>New Form Page</h1>
-        <h1>Edit Listing</h1>
+        <h1>Create Listing</h1>
         <Form :listings="listings" :url="url" :getListings="getListings"/>
     </div>
 </template>

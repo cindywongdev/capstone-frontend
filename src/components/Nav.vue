@@ -54,10 +54,10 @@
             lg:justify-between
             lg:w-7/12
         " v-bind:class="{ 'hidden': isActive }">
-            <NavLink path="/" text="Home"></NavLink>
-            <NavLink path="/create" text="Create New Listing"></NavLink>
-            <NavLink path="/" text="View My Listings"></NavLink>
-            <NavLink path="/" text="My Account"></NavLink>
+            <NavLink path="/" text="Home" @click="closeMenu"></NavLink>
+            <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>
+            <NavLink path="/" text="View My Listings" @click="closeMenu"></NavLink>
+            <NavLink path="/" text="My Account" @click="closeMenu"></NavLink>
         </div>
 
         </div>
@@ -82,6 +82,9 @@ export default {
     methods: {
         toggleMenu: function(){
             this.isActive = !this.isActive
+        },
+        closeMenu: function(){
+            this.isActive = true
         }
     }
 }
