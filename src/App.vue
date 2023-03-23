@@ -36,5 +36,6 @@ onBeforeMount(() => getListings())
 <style scoped>
 * {
     font-family: 'Quicksand';
+    font-weight: 500;
 }
 </style>
