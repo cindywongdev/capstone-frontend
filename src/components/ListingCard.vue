@@ -1,6 +1,6 @@
 <template>
     <!-- entire card div -->
-    <router-link :to="{ name: 'listing', params: { id: listing.id } }" class="w-max hover:bg-neutral-100 transition-colors">
+    <router-link :to="{ name: 'listing', params: { id: listing.id } }" class="w-max hover:bg-neutral-100 hover:rounded-lg transition-colors">
         <div class="
                 container
                 flex
@@ -8,7 +8,7 @@
                 border
                 border-neutral-600
                 rounded-lg
-                bg-white
+                
                 shadow-lg
                 p-3
                 mx-auto
@@ -20,7 +20,7 @@
             <div class="grid place-content-between">
                 <div>
                     <h2 class="uppercase text-sm font-semibold text-dark-green">{{ listing.restaurant }}</h2>
-                    <h1 class="text-xl font-medium">{{ listing.food_name }}</h1>
+                    <h1 class="text-xl font-medium leading-5 mt-1">{{ listing.food_name }}</h1>
                 </div>
 
                 <div>

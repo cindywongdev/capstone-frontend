@@ -3,74 +3,68 @@
         grid
         gap-6
         p-4
+        md:p-8
+        m-2
         pt-10
         my-4
         bg-light-green
         rounded-xl
     ">
+        <TextInput input_type="text" attr_name="food_name" :value="listing_food_name" placeholder="name of food"/>
+        
+        <TextInput input_type="url" attr_name="img" placeholder="image url"/>
+
+        <!-- ingredients input -->
+        <!-- can only do none or 1 ingredient for now, not sure how to format into array yet -->
+        <TextInput input_type="text" attr_name="ingredients" placeholder="ingredients"/>
+
+        <!-- same applies to allergens -->
+        <TextInput input_type="text" attr_name="allergens" placeholder="allergens"/>
+
         <div class="relative">
-            <input type="text" id="food_name" name="food_name" placeholder="name of food" v-model="food_name" class="
-                peer
+            <label for="good_for_x_days" class="text-lg">how many days is this good for?</label>
+            <input type="number" id="good_for_x_days" name="good_for_x_days" v-model="good_for_x_days" min="1" max="30" class="
                 w-full
                 border-2
                 border-dark-green
                 rounded-md
                 placeholder-transparent
+                h-11
             "/>
-            <label for="food_name" class="
-                text-neutral-700
-                text-lg
-                absolute
-                -top-4
-                left-2
-                -translate-y-1/2
-                transition-all
-                peer-placeholder-shown:left-4
-                peer-placeholder-shown:top-1/2
-                peer-placeholder-shown:text-neutral-900
-                peer-focus:-top-4
-                peer-focus:left-2
-            ">name of food</label>
-        </div>
-        <div class="relative">
-            <input type="url" id="img" name="img" placeholder="image url" v-model="img"/>
-            <label for="img">image url</label>
-        </div>
-        <!-- ingredients input -->
-        <!-- can only do none or 1 ingredient for now, not sure how to format into array yet -->
-        <div class="relative">
-            <input type="text" id="ingredients" name="ingredients" placeholder="ingredients" v-model="ingredients"/>
-            <label for="ingredients">ingredients</label>
-        </div>
-        <!-- same applies to allergens -->
-        <div class="relative">
-            <input type="text" id="allergens" name="allergens" placeholder="allergens" v-model="allergens"/>
-            <label for="allergens">allergens</label>
         </div>
 
         <div class="relative">
-            <input type="number" id="good_for_x_days" name="good_for_x_days" v-model="good_for_x_days" min="1" max="30"/>
-            <label for="good_for_x_days">how many days is this good for?</label>
-        </div>
-        <div class="relative">
-            <input type="number" id="num_servings" name="num_servings" v-model="num_servings" min="1" max="999"/>
-            <label for="num_servings">how many servings are you giving away?</label>
+            <label for="num_servings" class="text-lg">how many servings are you giving?</label>
+            <input type="number" id="num_servings" name="num_servings" v-model="num_servings" min="1" max="999" class="
+                w-full
+                border-2
+                border-dark-green
+                rounded-md
+                placeholder-transparent
+                h-11
+            "/>
         </div>
 
         <div class="relative">
-            <input type="datetime-local" id="pickup_by_time" name="pickup_by_time" v-model="pickup_by_time" min="1" max="999"/>
-            <label for="pickup_by_time">when should food be picked up by?</label>
+            <label for="pickup_by_time" class="text-lg">when should food be picked up by?</label>
+            <input type="datetime-local" id="pickup_by_time" name="pickup_by_time" v-model="pickup_by_time" min="1" max="999" class="
+                w-full
+                border-2
+                border-dark-green
+                rounded-md
+                placeholder-transparent
+                h-11
+            "/>
         </div>
 
         <!-- this input should be removed later once auth is added -->
         <!-- this will autofill based on the provider profile -->
-        <div class="relative">
-            <input type="text" id="restaurant" name="restaurant" placeholder="name of restaurant" v-model="restaurant"/>
-            <label for="restaurant">name of restaurant</label>
-        </div>
+        <TextInput input_type="text" attr_name="restaurant" placeholder="name of restaurant"/>
 
         <input type="submit" :value="buttonLabel" class="
             bg-green-500
+            mt-2
+            md:mt-4
             p-2
             rounded-md"/>
     </form>
@@ -86,6 +80,7 @@
 // imports
 import { useRoute, useRouter } from 'vue-router'
 import { ref, toRefs } from 'vue'
+import TextInput from './TextInput.vue';
 
 // define props
 const props = defineProps({
@@ -122,14 +117,18 @@ if (route.name === "edit") {
     const listing = listings.value.find((listing) => {return listing.id == route.params.id})
 
     // fill form with that listing's values
-    food_name.value = listing.food_name
-    img.value = listing.img
-    ingredients.value = listing.ingredients
-    allergens.value = listing.allergens
-    good_for_x_days.value = listing.good_for_x_days
-    num_servings.value = listing.num_servings
-    pickup_by_time.value = listing.pickup_by_time
-    restaurant.value = listing.restaurant
+    // food_name.value = listing.food_name
+    const listing_food_name = listing.food_name
+    console.log(listing_food_name)
+    console.log(typeof(listing_food_name))
+
+    // img.value = listing.img
+    // ingredients.value = listing.ingredients
+    // allergens.value = listing.allergens
+    // good_for_x_days.value = listing.good_for_x_days
+    // num_servings.value = listing.num_servings
+    // pickup_by_time.value = listing.pickup_by_time
+    // restaurant.value = listing.restaurant
 
     // set label for submit button
     buttonLabel = "Update Listing"
@@ -164,6 +163,18 @@ if (route.name === "edit") {
 
     // label for submit button
     buttonLabel = "Create Listing"
+
+    // food_name.value = listing.food_name
+    const listing_food_name = ""
+        
+        // img.value = listing.img
+        // ingredients.value = listing.ingredients
+        // allergens.value = listing.allergens
+        // good_for_x_days.value = listing.good_for_x_days
+        // num_servings.value = listing.num_servings
+        // pickup_by_time.value = listing.pickup_by_time
+        // restaurant.value = listing.restaurant
+
 
     // define function to create
     handleSubmit = async () => {
