@@ -6,13 +6,14 @@
                 flex-col
                 items-center
                 justify-center
-                mx-auto">
+                gap-4
+                ">
 
         <!-- top div for text and options button-->
-        <div class="relative flex justify-between w-full">
+        <div class="relative flex justify-between w-full pl-2 pt-1">
             <div>
-                <h2>{{ listing.restaurant }}</h2>
-                <h1>{{ listing.food_name }}</h1>
+                <ShowPgSubheading :text="listing.restaurant"/>
+                <h1 class="text-3xl mb-2">{{ listing.food_name }}</h1>
                 <h2>{{ listing.listing_date }}</h2>
             </div>
 
@@ -72,45 +73,50 @@
         </div>
 
         <!-- image -->
-        <img :src="listing.img" :alt="listing.food_name" />
+        <img :src="listing.img" :alt="listing.food_name" class="w-full px-2 h-80 object-cover"/>
 
         <!-- second div for rest of text -->
-        <div>
+        <div class="w-full pl-2 grid gap-3">
             <div>
-                <h2>ingredients</h2>
+                <ShowPgSubheading text="ingredients"/>
                 <h2>{{ listing.ingredients }}</h2>
             </div>
             <div>
-                <h2>allergens</h2>
+                <ShowPgSubheading text="allergens"/>
                 <h2>{{ listing.allergens }}</h2>
             </div>
             <div>
-                <h2>still good for</h2>
+                <ShowPgSubheading text="still good for"/>
                 <h2>{{ listing.good_for_x_days }} more days</h2>
             </div>
             <div>
-                <h2>servings left</h2>
+                <ShowPgSubheading text="servings left"/>
                 <h2>{{ listing.num_servings }}</h2>
             </div>
             <div>
-                <h2>pickup by</h2>
+                <ShowPgSubheading text="pickup by"/>
                 <h2>{{ listing.pickup_by_time }}</h2>
             </div>
         </div>
-
-        <footer>
-            <router-link to="/"><button class="bg-green-500 p-2 rounded-md">Back to Listings</button></router-link>
-        </footer>
     </div>
+
+    <footer>
+        <router-link to="/"><button class="bg-green-500 p-2 rounded-md">Back to Listings</button></router-link>
+    </footer>
+
 </template>
 
 <script>
 import { useRoute, useRouter } from 'vue-router' // get useroute hook to access route params
 import { toRefs } from 'vue'; // get toRefs hook to maintain props reactivity
+import ShowPgSubheading from '../components/ShowPgSubheading.vue';
 
 export default {
     name: "SingleListing",
-    // define props
+    // define props,
+    components: {
+        ShowPgSubheading
+    },
     props: {
         'listings': Array,
         'url': String,
