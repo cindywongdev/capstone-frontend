@@ -19,17 +19,17 @@
             <!-- div for text -->
             <div class="grid place-content-between">
                 <div>
-                    <h2 class="uppercase text-sm font-medium text-dark-green">{{ listing.restaurant }}</h2>
+                    <h2 class="uppercase text-sm font-semibold text-dark-green">{{ listing.restaurant }}</h2>
                     <h1 class="text-xl font-medium">{{ listing.food_name }}</h1>
                 </div>
 
                 <div>
-                    <h2 class="uppercase text-sm font-medium text-dark-green">servings left</h2>
+                    <h2 class="uppercase text-sm font-semibold text-dark-green">servings left</h2>
                     <h1 class="text-lg">{{ listing.num_servings }}</h1>
                 </div>
 
                 <div>
-                    <h2 class="uppercase text-sm font-medium text-dark-green">pickup by</h2>
+                    <h2 class="uppercase text-sm font-semibold text-dark-green">pickup by</h2>
                     <h1 class="text-lg">{{ pickupTime }}</h1>
                 </div>
             </div>
