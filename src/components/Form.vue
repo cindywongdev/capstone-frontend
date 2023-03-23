@@ -1,8 +1,36 @@
 <template>
-    <form v-on:submit.prevent="handleSubmit">
+    <form v-on:submit.prevent="handleSubmit" class="
+        grid
+        gap-6
+        p-4
+        pt-10
+        my-4
+        bg-light-green
+        rounded-xl
+    ">
         <div class="relative">
-            <input type="text" id="food_name" name="food_name" placeholder="name of food" v-model="food_name"/>
-            <label for="food_name">name of food</label>
+            <input type="text" id="food_name" name="food_name" placeholder="name of food" v-model="food_name" class="
+                peer
+                w-full
+                border-2
+                border-dark-green
+                rounded-md
+                placeholder-transparent
+            "/>
+            <label for="food_name" class="
+                text-neutral-700
+                text-lg
+                absolute
+                -top-4
+                left-2
+                -translate-y-1/2
+                transition-all
+                peer-placeholder-shown:left-4
+                peer-placeholder-shown:top-1/2
+                peer-placeholder-shown:text-neutral-900
+                peer-focus:-top-4
+                peer-focus:left-2
+            ">name of food</label>
         </div>
         <div class="relative">
             <input type="url" id="img" name="img" placeholder="image url" v-model="img"/>
@@ -44,7 +72,6 @@
         <input type="submit" :value="buttonLabel" class="
             bg-green-500
             p-2
-            m-2
             rounded-md"/>
     </form>
 
@@ -52,7 +79,6 @@
         bg-green-500
         p-2
         m-2
-        mt-0
         rounded-md">Cancel</button></router-link>
 </template>
 
