@@ -1,6 +1,6 @@
 <template>
     <div class="relative mt-3">
-            <input :type="input_type" :id="attr_name" :name="attr_name" :value="value" :placeholder="placeholder" :v-model="attr_name" class="
+            <input :type="input_type" :id="attr_name" :name="attr_name" :placeholder="placeholder" :v-model="attr_name" class="
                 peer
                 w-full
                 border-2
@@ -34,7 +34,7 @@ const props = defineProps({
     'attr_name': String,
     'placeholder': String,
     'value': String
-}) 
+})
 
 const { placeholder, value } = toRefs(props)
 

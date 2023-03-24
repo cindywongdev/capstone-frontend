@@ -117,18 +117,14 @@ if (route.name === "edit") {
     const listing = listings.value.find((listing) => {return listing.id == route.params.id})
 
     // fill form with that listing's values
-    // food_name.value = listing.food_name
-    const listing_food_name = listing.food_name
-    console.log(listing_food_name)
-    console.log(typeof(listing_food_name))
-
-    // img.value = listing.img
-    // ingredients.value = listing.ingredients
-    // allergens.value = listing.allergens
-    // good_for_x_days.value = listing.good_for_x_days
-    // num_servings.value = listing.num_servings
-    // pickup_by_time.value = listing.pickup_by_time
-    // restaurant.value = listing.restaurant
+    food_name.value = listing.food_name
+    img.value = listing.img
+    ingredients.value = listing.ingredients
+    allergens.value = listing.allergens
+    good_for_x_days.value = listing.good_for_x_days
+    num_servings.value = listing.num_servings
+    pickup_by_time.value = listing.pickup_by_time
+    restaurant.value = listing.restaurant
 
     // set label for submit button
     buttonLabel = "Update Listing"
@@ -164,18 +160,6 @@ if (route.name === "edit") {
     // label for submit button
     buttonLabel = "Create Listing"
 
-    // food_name.value = listing.food_name
-    const listing_food_name = ""
-        
-        // img.value = listing.img
-        // ingredients.value = listing.ingredients
-        // allergens.value = listing.allergens
-        // good_for_x_days.value = listing.good_for_x_days
-        // num_servings.value = listing.num_servings
-        // pickup_by_time.value = listing.pickup_by_time
-        // restaurant.value = listing.restaurant
-
-
     // define function to create
     handleSubmit = async () => {
         // wrap ingredients and allergens in an array to fit data model
@@ -184,12 +168,15 @@ if (route.name === "edit") {
         allergens.value = [].concat(allergens.value)
         console.log(allergens.value)
 
+        console.log(food_name.value)
+
         await fetch(url.value, {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+                // OHHH i think the app cant access food_name.value bc it's inside the component
                 food_name: food_name.value,
                 img: img.value,
                 ingredients: ingredients.value,
