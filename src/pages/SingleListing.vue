@@ -168,6 +168,17 @@ export default {
             }
         }
 
+        async function deletePost() {
+            await fetch(url.value + listing.id + "/", {
+                method: "delete",
+            })
+
+            // update all listings page
+            await getListings.value()
+            // redirect
+            router.push("/")
+        }
+
         // get router to use router.push
         const router = useRouter()
         // get route obj to access params
@@ -190,7 +201,8 @@ export default {
             getListings,
             ingredients,
             allergens,
-            pickupTime
+            pickupTime,
+            deletePost
         }
     },
     // define data (isActive variable)
@@ -203,16 +215,6 @@ export default {
     methods: {
         toggleOptions: function(){
             this.isActive = !this.isActive
-        },
-        deletePost: async function () {
-            await fetch(url.value + listing.id + "/", {
-                method: "delete",
-            })
-
-            // update all listings page
-            await getListings.value()
-            // redirect
-            router.push("/")
         }
     }
 }
