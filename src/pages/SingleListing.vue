@@ -143,7 +143,7 @@
 
 <script>
 import { useRoute, useRouter } from 'vue-router' // get useroute hook to access route params
-import { toRefs } from 'vue'; // get toRefs hook to maintain props reactivity
+import { toRefs, onBeforeMount } from 'vue'; // get toRefs hook to maintain props reactivity
 import ShowPgSubheading from '../components/ShowPgSubheading.vue';
 import moment from 'moment';
 
@@ -153,12 +153,22 @@ export default {
     components: {
         ShowPgSubheading
     },
-    props: {
-        'listings': Array,
-        'url': String,
-        'getListings': Function
-    },
+    props: ['listings', 'url', 'getListings'],
+    // {
+    //     'listings': Array,
+    //     'url': String,
+    //     'getListings': Function
+    // }
     setup(props) {
+        // get router to use router.push
+        const router = useRouter()
+        // get route obj to access params
+        const route = useRoute()
+        console.log("route.path", route.path)
+        // retrieve needed props
+        console.log("props", props)
+        const { listings, url, getListings } = toRefs(props)
+
         function checkArrLength (arr){
             console.log(arr.length)
             if ((arr.length === 1 && arr[0] === "") || arr.length === 0) {
@@ -178,15 +188,18 @@ export default {
             // redirect
             router.push("/")
         }
-
-        // get router to use router.push
-        const router = useRouter()
-        // get route obj to access params
-        const route = useRoute()
-        // retrieve needed props
-        const { listings, url, getListings } = toRefs(props)
+  
+        console.log("all listing", listings)
         // grab target listing
         const listing = listings.value.find((listing) => listing.id == route.params.id)
+        
+        // function getListing(){
+        //     const listing = listings.value.find((listing) => listing.id == route.params.id)
+        //     return listing
+        // }
+        // onBeforeMount(() => {getListing()})
+        // const listing = getListing()
+
         // check length of ingredients & allergens arrays
         const ingredients = checkArrLength(listing.ingredients)
         const allergens = checkArrLength(listing.allergens)

@@ -5,6 +5,7 @@ import AllListings from './pages/AllListings.vue'
 import SingleListing from './pages/SingleListing.vue'
 import NewPage from './pages/NewPage.vue'
 import EditPage from './pages/EditPage.vue'
+import NotFound from './components/NotFound.vue'
 
 /////////////////////////
 // Array of Routes
@@ -14,5 +15,6 @@ export default [
     { path: "/", component: AllListings, props: true },
     { path: "/listing/:id", name:'listing', component: SingleListing, props: true },
     { path: "/create", component: NewPage, props: true },
-    { path: "/update/:id", name: "edit", component: EditPage, props: true }
+    { path: "/update/:id", name: "edit", component: EditPage, props: true },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
