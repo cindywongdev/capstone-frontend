@@ -21,7 +21,7 @@
         <!-- same applies to allergens -->
         <!-- <TextInput input_type="text" attr_name="allergens" placeholder="allergens"/> -->
         <div class="relative mt-3">
-            <input type="text" id="food_name" name="food_name" placeholder="name of food" :v-model="food_name" class="textInputStyle peer"/>
+            <input type="text" id="food_name" name="food_name" placeholder="name of food" v-model="food_name" class="textInputStyle peer"/>
             <label for="food_name" class="
                 inputLabelStyle
                 transition-all
@@ -34,7 +34,7 @@
         </div>
 
         <div class="relative mt-3">
-            <input type="text" id="img" name="img" placeholder="image url" :v-model="img" class="textInputStyle peer"/>
+            <input type="text" id="img" name="img" placeholder="image url" v-model="img" class="textInputStyle peer"/>
             <label for="img" class="
                 inputLabelStyle
                 transition-all
@@ -47,7 +47,7 @@
         </div>
 
         <div class="relative mt-3">
-            <input type="text" id="ingredients" name="ingredients" placeholder="ingredients" :v-model="ingredients" class="textInputStyle peer"/>
+            <input type="text" id="ingredients" name="ingredients" placeholder="ingredients" v-model="ingredients" class="textInputStyle peer"/>
             <label for="ingredients" class="
                 inputLabelStyle
                 transition-all
@@ -60,7 +60,7 @@
         </div>
 
         <div class="relative mt-3">
-            <input type="text" id="allergens" name="allergens" placeholder="allergens" :v-model="allergens" class="textInputStyle peer"/>
+            <input type="text" id="allergens" name="allergens" placeholder="allergens" v-model="allergens" class="textInputStyle peer"/>
             <label for="allergens" class="
                 inputLabelStyle
                 transition-all
@@ -113,7 +113,7 @@
         <!-- <TextInput input_type="text" attr_name="restaurant" placeholder="name of restaurant"/> -->
 
         <div class="relative mt-3">
-            <input type="text" id="restaurant" name="restaurant" placeholder="name of restaurant" :v-model="restaurant" class="textInputStyle peer"/>
+            <input type="text" id="restaurant" name="restaurant" placeholder="name of restaurant" v-model="restaurant" class="textInputStyle peer"/>
             <label for="restaurant" class="
                 inputLabelStyle
                 transition-all
@@ -159,16 +159,16 @@ const route = useRoute()
 const router = useRouter()
 // get necessary props, pull down reactivity
 const { listings, url, getListings } = toRefs(props)
-// make state variables for each form field so that they can be autofilled if user is editing
-// const food_name = ref("")
-// const img = ref("")
-// const ingredients = ref([])
-// const allergens = ref([])
-// const good_for_x_days = ref(0)
-// const num_servings = ref(0)
-// // uhhh does ref for a datetime input need an initial value? does null work?
-// const pickup_by_time = ref(null)
-// const restaurant = ref("")
+// make state variables for each form field so that they can be referenced and autofilled if user is editing
+const food_name = ref("")
+const img = ref("")
+const ingredients = ref([])
+const allergens = ref([])
+const good_for_x_days = ref(0)
+const num_servings = ref(0)
+// uhhh does ref for a datetime input need an initial value? does null work?
+const pickup_by_time = ref(null)
+const restaurant = ref("")
 // label for submit button & submit function
 let buttonLabel
 let handleSubmit
