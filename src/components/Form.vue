@@ -130,7 +130,9 @@
             mt-2
             md:mt-4
             p-2
-            rounded-md"/>
+            rounded-md
+            hover:cursor-pointer
+            "/>
     </form>
 
     <router-link to="/"><button class="
