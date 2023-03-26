@@ -135,7 +135,7 @@
             "/>
     </form>
 
-    <router-link to="/"><button class="
+    <router-link to="/listings"><button class="
         bg-green-500
         p-2
         m-2

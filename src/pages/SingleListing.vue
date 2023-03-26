@@ -124,7 +124,7 @@
             w-full
             max-w-6xl
         ">
-            <router-link to="/"><button class="
+            <router-link to="/listings"><button class="
                 bg-dark-green
                 p-2
                 rounded-full
