@@ -54,10 +54,12 @@
             lg:justify-between
             lg:w-7/12
         " v-bind:class="{ 'hidden': isActive }">
-            <NavLink path="/" text="Home" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="Home" @click="closeMenu"></NavLink>
             <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>
-            <NavLink path="/" text="View My Listings" @click="closeMenu"></NavLink>
-            <NavLink path="/" text="My Account" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="View My Listings" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="My Account" @click="closeMenu"></NavLink>
+            <LoginButton/>
+            <LogoutButton/>
         </div>
 
         </div>
@@ -67,13 +69,17 @@
 <script>
 import NavLink from './NavLink.vue'
 import Logo from './Logo.vue'
+import LoginButton from './LoginButton.vue'
+import LogoutButton from './LogoutButton.vue'
 
 export default {
     name: "Nav",
     components: {
-        NavLink,
-        Logo
-    },
+    NavLink,
+    Logo,
+    LoginButton,
+    LogoutButton
+},
     data: function(){
         return {
             isActive: true,

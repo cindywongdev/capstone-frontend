@@ -29,7 +29,7 @@ const listings = getListings()
 export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { 
-        path: "/", 
+        path: "/listings", 
         component: AllListings, 
         props: true 
     },
