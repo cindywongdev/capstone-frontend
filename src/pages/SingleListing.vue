@@ -1,6 +1,7 @@
 <template>
     <div class="
                 container 
+                mx-auto
                 relative
                 flex
                 flex-col
@@ -8,6 +9,7 @@
                 justify-center
                 gap-4
                 mb-20
+                max-w-3xl
                 ">
 
         <!-- top div for text and options button-->

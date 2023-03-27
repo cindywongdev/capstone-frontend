@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container mx-auto max-w-3xl">
         <h1 class="text-2xl mx-2">Edit Listing</h1>
         <Form :listings="listings" :url="url" :getListings="getListings"/>
     </div>

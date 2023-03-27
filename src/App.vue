@@ -5,9 +5,12 @@
       <Nav></Nav>
     </header>
     <!-- pass props to routes -->
-    <main class="p-4 md:p-8 max-w-3xl mx-auto mt-24">
+    <main class="p-4 md:p-8 mx-auto mt-24">
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
+    <footer>
+      <Footer/>
+    </footer>
   </body>
 </template>
 
@@ -15,6 +18,7 @@
 import Test from "./components/Test.vue";
 import { ref, onBeforeMount, onMounted } from "vue"
 import Nav from './components/Nav.vue'
+import Footer from "./components/Footer.vue";
 
 // import base url using import.meta.env obj
 const { VITE_API_BASE_URL } = import.meta.env

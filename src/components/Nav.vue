@@ -6,6 +6,7 @@
         left-0
         w-full
         z-50
+        h-24
         ">
         <div class="
             container

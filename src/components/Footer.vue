@@ -1,11 +1,11 @@
 <template>
-    <footer class="text-gray-600 body-font">
+    <footer class="text-gray-600 body-font w-screen">
         <div
-            class="border container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-            <div class="border w-64 flex-shrink-0 md:mx-0 text-left">
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 text-left">
                 <a class="flex title-font font-medium items-center justify-start text-gray-900">
                     <Logo/>
-                    <span class="ml-0 text-xl">Leftover</span>
+                    <span class="ml-0 text-xl lg:hidden">Leftover</span>
                 </a>
                 <p class="mt-2 px-4 text-sm text-gray-500">From excess to access: Helping feed those in need.</p>
             </div>
