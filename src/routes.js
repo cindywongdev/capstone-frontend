@@ -1,11 +1,11 @@
 /////////////////////////
 // Components Imports
 /////////////////////////
-import AllListings from './pages/AllListings.vue'
+// no need, dynamically import them below
 import SingleListing from './pages/SingleListing.vue'
 import NewPage from './pages/NewPage.vue'
 import EditPage from './pages/EditPage.vue'
-import NotFound from './components/NotFound.vue'
+import NotFound from './pages/NotFound.vue'
 
 
 // import base url using import.meta.env obj
@@ -29,14 +29,18 @@ const listings = getListings()
 export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { 
+        path: "/", 
+        component: () => import('./pages/LandingPage.vue')
+    },
+    { 
         path: "/listings", 
-        component: AllListings, 
+        component: () => import('./pages/AllListings.vue'), 
         props: true 
     },
     { 
         path: "/listing/:id", 
         name:'listing', 
-        component: SingleListing, 
+        component: () => import('./pages/SingleListing.vue'), 
         props: true,
         // beforeEnter(to, from){
         //     console.log("all listings", listings)
@@ -61,18 +65,18 @@ export default [
     },
     { 
         path: "/create", 
-        component: NewPage, 
+        component: () => import('./pages/NewPage.vue'), 
         props: true 
     },
     { 
         path: "/update/:id", 
         name: "edit", 
-        component: EditPage, 
+        component: () => import('./pages/EditPage.vue'), 
         props: true 
     },
     { 
         path: '/:pathMatch(.*)*', 
         name: 'NotFound', 
-        component: NotFound 
+        component:  () => import('./pages/NotFound.vue')
     }
 ]
