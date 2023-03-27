@@ -7,6 +7,7 @@
         w-full
         z-50
         h-24
+        lg:h-32
         ">
         <div class="
             container
@@ -48,12 +49,14 @@
             text-lg
             p-6
             items-center
+            h-24
             lg:flex
             lg:flex-row
             lg:static
             lg:shadow-none
             lg:justify-between
             lg:w-7/12
+            lg:h-32
         " v-bind:class="{ 'hidden': isActive }">
             <NavLink path="/listings" text="Home" @click="closeMenu"></NavLink>
             <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>

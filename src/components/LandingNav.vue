@@ -7,6 +7,7 @@
             w-full
             z-50
             h-24
+            lg:h-32
             ">
         <div class="
             container
@@ -17,7 +18,7 @@
             px-3
         ">
 
-            <Logo class="w-10 h-10"></Logo>
+            <Logo class="w-10 h-10 lg:w-12"></Logo>
             <h1 class="mr-auto text-3xl text-dark-green">Leftover</h1>
 
             <!-- hamburger menu button -->
@@ -48,6 +49,7 @@
                 text-center
                 text-lg
                 p-6
+                h-24
                 items-center
                 lg:flex
                 lg:flex-row
@@ -55,13 +57,14 @@
                 lg:shadow-none
                 lg:justify-between
                 lg:w-7/12
+                lg:h-32
             " v-bind:class="{ 'hidden': isActive }">
                 <NavLink path="/about" text="About" @click="closeMenu"></NavLink>
                 <NavLink path="/team" text="Our Team" @click="closeMenu"></NavLink>
                 <NavLink path="/contact" text="Contact" @click="closeMenu"></NavLink>
 
+                <SignupButton/>
                 <LoginButton/>
-                <LogoutButton />
             </div>
         </div>
     </nav>
@@ -71,7 +74,7 @@
 import NavLink from './NavLink.vue'
 import Logo from './Logo.vue'
 import LoginButton from './LoginButton.vue'
-import LogoutButton from './LogoutButton.vue'
+import SignupButton from './SignupButton.vue'
 
 export default {
     name: "Nav",
@@ -79,7 +82,7 @@ export default {
         NavLink,
         Logo,
         LoginButton,
-        LogoutButton
+        SignupButton
     },
     data: function () {
         return {
