@@ -37,6 +37,7 @@ https://developer.edamam.com/edamam-docs-nutrition-api#/ -->
 - CSS
 - SASS
 - TailwindCSS
+- Tailblocks CC
 
 
 #### Component Architecture
