@@ -49,7 +49,7 @@
             text-lg
             p-6
             items-center
-            h-24
+            h-fit
             lg:flex
             lg:flex-row
             lg:static

@@ -1,5 +1,7 @@
 <template>
     <nav class="
+            border
+            flex
             bg-white
             fixed
             top-0
@@ -49,7 +51,7 @@
                 text-center
                 text-lg
                 p-6
-                h-24
+                h-fit
                 items-center
                 lg:flex
                 lg:flex-row
