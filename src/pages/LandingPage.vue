@@ -50,15 +50,7 @@
                     -translate-x-1/2
                     py-3
                     px-6
-                    rounded-lg
                     uppercase
-                    text-white
-                    bg-dark-green
-                    hover:bg-light-green
-                    hover:text-neutral-900
-                    transition-colors
-                    text-sm
-                    shadow-xl
                     sm:top-72
                     sm:text-lg
                     lg:top-76
@@ -165,6 +157,12 @@
                     ">Help reduce food waste and minimize the environmental impact <br class="lg:hidden"/>of discarded food.</p>
             </div>
             
+            <SignupButton buttonText="Sign Up" class="
+            py-3
+            px-9
+            uppercase
+            sm:text-lg
+            "/>
         </section>
     </div>
 </template>

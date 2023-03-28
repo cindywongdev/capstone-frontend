@@ -1,5 +1,15 @@
 <template>
-    <button @click="signup">
+    <button @click="signup" class="
+        rounded-lg
+        py-2
+        px-4
+        text-white
+        bg-dark-green
+        hover:bg-[#213131]
+        transition-colors
+        text-base
+        shadow-xl
+    ">
         {{ buttonText }}
     </button>
 </template>

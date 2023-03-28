@@ -1,6 +1,5 @@
 <template>
     <nav class="
-            border
             flex
             bg-white
             fixed
