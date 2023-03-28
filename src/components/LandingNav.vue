@@ -66,6 +66,10 @@
 
                 <SignupButton buttonText="Sign Up"/>
                 <LoginButton/>
+                <fb:login-button 
+                scope="public_profile,email"
+                @onlogin="checkLoginState();">
+                </fb:login-button>
             </div>
         </div>
     </nav>
@@ -96,7 +100,12 @@ export default {
         },
         closeMenu: function () {
             this.isActive = true
-        }
+        },
+        checkLoginState: function () {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+}
     }
 }
 

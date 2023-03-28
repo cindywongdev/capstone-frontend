@@ -71,8 +71,8 @@
 
         <section aria-label="our qualities" class="
             grid
-            gap-8
-            lg:gap-12
+            gap-12
+            lg:gap-16
             place-items-center
             text-center 
             bg-light-green 
