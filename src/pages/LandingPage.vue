@@ -76,6 +76,17 @@
             ">Photo by <a href="https://unsplash.com/de/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Hanaoka</a> on <a href="https://unsplash.com/photos/_q4AQcGX28A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </h3>
         </section>
+
+        <section aria-label="our qualities" class="
+            grid place-items-center bg-light-green p-4 text-dark-green
+        ">
+            <h1 class="text-lg">Why Leftover?</h1>
+            <div>
+                <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="w-12"/>
+                <h1>Find Local Donations</h1>
+                <p>text text text</p>
+            </div>
+        </section>
     </div>
 </template>
 
