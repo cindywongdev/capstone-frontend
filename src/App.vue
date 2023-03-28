@@ -5,7 +5,7 @@
       <Nav></Nav>
     </header>
     <!-- pass props to routes -->
-    <main class="p-4 md:p-8 mx-auto mt-24 lg:mt-28">
+    <main class="relative md:p-8 mx-auto mt-24 lg:mt-28">
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
     <footer>

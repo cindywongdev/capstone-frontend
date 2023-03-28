@@ -7,6 +7,7 @@
                 flex-col
                 items-center
                 justify-center
+                p-4
                 gap-4
                 mb-20
                 max-w-3xl
