@@ -5,7 +5,7 @@
       <Nav></Nav>
     </header>
     <!-- pass props to routes -->
-    <main class="relative md:p-8 mx-auto mt-24 lg:mt-28">
+    <main class="relative mx-auto mt-24 lg:mt-28">
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
     <footer>
@@ -21,8 +21,8 @@ import Nav from './components/Nav.vue'
 import Footer from "./components/Footer.vue";
 
 // import base url using import.meta.env obj
-const { VITE_API_BASE_URL } = import.meta.env
-const url = VITE_API_BASE_URL
+const { VITE_API_LISTING_BASE_URL } = import.meta.env
+const url = VITE_API_LISTING_BASE_URL
 
 // create state for listings
 const listings = ref([])

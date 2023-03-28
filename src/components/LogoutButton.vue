@@ -13,7 +13,7 @@ export default {
 
         return {
             logout: () => {
-                logout({ logoutParams: { returnTo: import.meta.env.VITE_AUTH0_CALLBACK_URL } })
+                logout({ logoutParams: { returnTo: import.meta.env.VITE_AUTH0_CALLBACK_LOGOUT_URL } })
             }
         }
     }

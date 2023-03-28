@@ -65,7 +65,7 @@
                 <NavLink path="/team" text="Our Team" @click="closeMenu"></NavLink>
                 <NavLink path="/contact" text="Contact" @click="closeMenu"></NavLink>
 
-                <SignupButton/>
+                <SignupButton buttonText="Sign Up"/>
                 <LoginButton/>
             </div>
         </div>
