@@ -119,10 +119,18 @@
                     </a>
                 </span>
 
-                <div class="text-gray-500 text-sm text-center sm:text-right mt-2 sm:mt-0 sm: ml-auto">
+                <div class="
+                    text-gray-500 
+                    text-sm 
+                    text-center  
+                    mt-2 
+                    md:mt-0 
+                    md:ml-auto
+                    md:text-right">
                     <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons, </a>
                     <a href="https://www.flaticon.com/free-icons/restaurant" title="restaurant icons">restaurant icons, </a> and
-                    <a href="https://www.flaticon.com/free-icons/food-waste" title="food waste icons">food waste icons</a> <br/>created by Freepik - Flaticon
+                    <br class="sm:hidden"/>
+                    <a href="https://www.flaticon.com/free-icons/food-waste" title="food waste icons">food waste icons</a> <br class="hidden md:block"/>created by Freepik - Flaticon
                 </div>
             </div>
         </div>

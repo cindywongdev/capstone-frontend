@@ -78,14 +78,93 @@
         </section>
 
         <section aria-label="our qualities" class="
-            grid place-items-center bg-light-green p-4 text-dark-green
+            grid
+            gap-8
+            lg:gap-12
+            place-items-center
+            text-center 
+            bg-light-green 
+            p-8
+            pb-12
+            md:p-12
+            lg:pb-20
+            text-dark-green
         ">
-            <h1 class="text-lg">Why Leftover?</h1>
-            <div>
-                <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="w-12"/>
-                <h1>Find Local Donations</h1>
-                <p>text text text</p>
+            <h1 class="
+                font-semibold 
+                text-lg
+                md:text-2xl
+                ">Why Leftover?</h1>
+
+            <div class="
+                grid 
+                gap-2
+                place-items-center
+                max-w-xs
+                lg:max-w-lg
+                ">
+                <div>
+                    <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
+                        w-20
+                        lg:w-24
+                        "/>
+                </div>
+                <h1 class="
+                    font-semibold
+                    text-3xl
+                    lg:text-4xl
+                ">Find Local Donations</h1>
+                <p class="
+                    text-lg
+                    ">Locate nearby food donations and arrange pickup for yourself or <br class="lg:hidden"/>your organization.</p>
             </div>
+
+            <div class="
+                grid 
+                gap-2
+                place-items-center
+                max-w-xs
+                lg:max-w-md
+                ">
+                <div>
+                    <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
+                        w-20
+                        lg:w-24
+                        "/>
+                </div>
+                <h1 class="
+                    font-semibold
+                    text-3xl
+                    lg:text-4xl
+                ">Donate Surplus Food</h1>
+                <p class="
+                    text-lg
+                    ">List excess available food on the app, and nearby groups or individuals <br class="lg:hidden"/>can arrange pickup.</p>
+            </div>
+
+            <div class="
+                grid 
+                gap-2
+                place-items-center
+                max-w-xs
+                lg:max-w-md
+                ">
+                <div>
+                    <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
+                        w-20
+                        lg:w-24
+                        "/>
+                </div>
+                <h1 class="
+                    font-semibold
+                    text-3xl
+                    lg:text-4xl
+                ">Reduce Food Waste</h1>
+                <p class="
+                    text-lg
+                    ">Help reduce food waste and minimize the environmental impact <br class="lg:hidden"/>of discarded food.</p>
+            </div>
+            
         </section>
     </div>
 </template>
