@@ -1,7 +1,7 @@
 <template>
     <footer class="text-gray-600 body-font w-screen">
         <div
-            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            class="container px-5 py-8 pb-12 sm:py-12 md:py-20 lg:py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
             <div class="w-64 flex-shrink-0 md:mx-0 text-left">
                 <a class="flex title-font font-medium items-center justify-start text-gray-900">
                     <Logo/>
