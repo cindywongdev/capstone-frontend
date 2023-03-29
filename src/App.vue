@@ -5,9 +5,12 @@
       <Nav></Nav>
     </header>
     <!-- pass props to routes -->
-    <main class="p-4 md:p-8 max-w-3xl mx-auto mt-24">
+    <main class="relative mx-auto mt-24 lg:mt-28">
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
+    <footer>
+      <Footer></Footer>
+    </footer>
   </body>
 </template>
 
@@ -15,10 +18,11 @@
 import Test from "./components/Test.vue";
 import { ref, onBeforeMount, onMounted } from "vue"
 import Nav from './components/Nav.vue'
+import Footer from "./components/Footer.vue";
 
 // import base url using import.meta.env obj
-const { VITE_API_BASE_URL } = import.meta.env
-const url = VITE_API_BASE_URL
+const { VITE_API_LISTING_BASE_URL } = import.meta.env
+const url = VITE_API_LISTING_BASE_URL
 
 // create state for listings
 const listings = ref([])
@@ -31,21 +35,7 @@ const getListings = async function(){
 }
 
 // call the method before the component mounts
-onBeforeMount(() => {
-  getListings()
-
-  // window.scroll({
-  //   top: 0, 
-  //   left: 0, 
-  //   behavior: 'smooth' 
-  //   });
-})
-
-// how to scroll back to top of page automatically?
-
-// onMounted(() => {
-  
-// })
+onBeforeMount(() => {getListings()})
 
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="max-w-3xl container mx-auto p-4 md:p-8">
         <div class="
             flex
             justify-between

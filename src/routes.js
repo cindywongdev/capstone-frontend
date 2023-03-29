@@ -1,16 +1,14 @@
 /////////////////////////
 // Components Imports
 /////////////////////////
-import AllListings from './pages/AllListings.vue'
-import SingleListing from './pages/SingleListing.vue'
-import NewPage from './pages/NewPage.vue'
-import EditPage from './pages/EditPage.vue'
-import NotFound from './components/NotFound.vue'
-
+// no need, dynamically import them below
+import isAuthenticated from '../src/components/LoginButton.vue'
+console.log("imported auth", isAuthenticated)
 
 // import base url using import.meta.env obj
 const { VITE_API_BASE_URL } = import.meta.env
 const url = VITE_API_BASE_URL
+
 
 // create method to get listings
 const getListings = async function(){
@@ -30,13 +28,20 @@ export default [
     // ORDER MATTERS -- name attrib must go BEFORE component attrib
     { 
         path: "/", 
-        component: AllListings, 
-        props: true 
+        component: () => import('./pages/LandingPage.vue')
+    },
+    { 
+        path: "/listings", 
+        component: () => import('./pages/AllListings.vue'), 
+        props: true,
+        beforeEnter: (to, from) => {
+            
+        }
     },
     { 
         path: "/listing/:id", 
         name:'listing', 
-        component: SingleListing, 
+        component: () => import('./pages/SingleListing.vue'), 
         props: true,
         // beforeEnter(to, from){
         //     console.log("all listings", listings)
@@ -61,18 +66,18 @@ export default [
     },
     { 
         path: "/create", 
-        component: NewPage, 
+        component: () => import('./pages/NewPage.vue'), 
         props: true 
     },
     { 
         path: "/update/:id", 
         name: "edit", 
-        component: EditPage, 
+        component: () => import('./pages/EditPage.vue'), 
         props: true 
     },
     { 
         path: '/:pathMatch(.*)*', 
         name: 'NotFound', 
-        component: NotFound 
+        component:  () => import('./pages/NotFound.vue')
     }
 ]

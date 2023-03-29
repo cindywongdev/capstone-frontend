@@ -6,6 +6,8 @@
         left-0
         w-full
         z-50
+        h-24
+        lg:h-32
         ">
         <div class="
             container
@@ -25,7 +27,7 @@
             hover:text-neutral-600
             transition-colors
         ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2b4141"
             class="w-12 h-12">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -47,17 +49,21 @@
             text-lg
             p-6
             items-center
+            h-fit
             lg:flex
             lg:flex-row
             lg:static
             lg:shadow-none
             lg:justify-between
             lg:w-7/12
+            lg:h-32
         " v-bind:class="{ 'hidden': isActive }">
-            <NavLink path="/" text="Home" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="Home" @click="closeMenu"></NavLink>
             <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>
-            <NavLink path="/" text="View My Listings" @click="closeMenu"></NavLink>
-            <NavLink path="/" text="My Account" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="View My Listings" @click="closeMenu"></NavLink>
+            <NavLink path="/listings" text="My Account" @click="closeMenu"></NavLink>
+            <LoginButton/>
+            <LogoutButton/>
         </div>
 
         </div>
@@ -67,13 +73,17 @@
 <script>
 import NavLink from './NavLink.vue'
 import Logo from './Logo.vue'
+import LoginButton from './LoginButton.vue'
+import LogoutButton from './LogoutButton.vue'
 
 export default {
     name: "Nav",
     components: {
-        NavLink,
-        Logo
-    },
+    NavLink,
+    Logo,
+    LoginButton,
+    LogoutButton
+},
     data: function(){
         return {
             isActive: true,

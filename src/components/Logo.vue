@@ -1,5 +1,5 @@
 <template>
-    <a href="/" class="
+    <a href="/listings" class="
         flex
         items-center
         gap-4

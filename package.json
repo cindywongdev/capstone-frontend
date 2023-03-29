@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^2.1.0",
+    "auth0-js": "^9.20.2",
     "dotenv": "^16.0.3",
     "moment": "^2.29.4",
     "sass": "^1.59.3",

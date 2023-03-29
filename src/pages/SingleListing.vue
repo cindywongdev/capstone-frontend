@@ -1,13 +1,17 @@
 <template>
     <div class="
                 container 
+                mx-auto
                 relative
                 flex
                 flex-col
                 items-center
                 justify-center
+                p-4
+                md:p-8
                 gap-4
                 mb-20
+                max-w-3xl
                 ">
 
         <!-- top div for text and options button-->
@@ -124,7 +128,7 @@
             w-full
             max-w-6xl
         ">
-            <router-link to="/"><button class="
+            <router-link to="/listings"><button class="
                 bg-dark-green
                 p-2
                 rounded-full
