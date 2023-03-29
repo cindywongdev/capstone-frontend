@@ -2,15 +2,13 @@
 // Components Imports
 /////////////////////////
 // no need, dynamically import them below
-import SingleListing from './pages/SingleListing.vue'
-import NewPage from './pages/NewPage.vue'
-import EditPage from './pages/EditPage.vue'
-import NotFound from './pages/NotFound.vue'
-
+import isAuthenticated from '../src/components/LoginButton.vue'
+console.log("imported auth", isAuthenticated)
 
 // import base url using import.meta.env obj
 const { VITE_API_BASE_URL } = import.meta.env
 const url = VITE_API_BASE_URL
+
 
 // create method to get listings
 const getListings = async function(){
@@ -35,7 +33,10 @@ export default [
     { 
         path: "/listings", 
         component: () => import('./pages/AllListings.vue'), 
-        props: true 
+        props: true,
+        beforeEnter: (to, from) => {
+            
+        }
     },
     { 
         path: "/listing/:id", 

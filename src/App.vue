@@ -9,7 +9,7 @@
       <router-view :listings="listings" :url="url" :getListings="getListings"/>
     </main>
     <footer>
-      <Footer/>
+      <Footer></Footer>
     </footer>
   </body>
 </template>
@@ -35,21 +35,7 @@ const getListings = async function(){
 }
 
 // call the method before the component mounts
-onBeforeMount(() => {
-  getListings()
-
-  // window.scroll({
-  //   top: 0, 
-  //   left: 0, 
-  //   behavior: 'smooth' 
-  //   });
-})
-
-// how to scroll back to top of page automatically?
-
-// onMounted(() => {
-  
-// })
+onBeforeMount(() => {getListings()})
 
 </script>
 

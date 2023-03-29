@@ -66,10 +66,12 @@
 
                 <SignupButton buttonText="Sign Up"/>
                 <LoginButton/>
-                <fb:login-button 
+                <LogoutButton/>
+                
+                <!-- <fb:login-button 
                 scope="public_profile,email"
                 @onlogin="checkLoginState();">
-                </fb:login-button>
+                </fb:login-button> -->
             </div>
         </div>
     </nav>
@@ -79,6 +81,7 @@
 import NavLink from './NavLink.vue'
 import Logo from './Logo.vue'
 import LoginButton from './LoginButton.vue'
+import LogoutButton from './LogoutButton.vue'
 import SignupButton from './SignupButton.vue'
 
 export default {
@@ -87,6 +90,7 @@ export default {
         NavLink,
         Logo,
         LoginButton,
+        LogoutButton,
         SignupButton
     },
     data: function () {

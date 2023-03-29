@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 // import router stuff
 import { createRouter, createWebHistory } from 'vue-router'
-import routes from './routes'
+import routes from './routes.js'
 import { createAuth0 } from '@auth0/auth0-vue'
 
 // create router instance
