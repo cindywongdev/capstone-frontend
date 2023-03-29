@@ -60,9 +60,9 @@
                 lg:w-7/12
                 lg:h-32
             " v-bind:class="{ 'hidden': isActive }">
-                <NavLink path="/about" text="About" @click="closeMenu"></NavLink>
-                <NavLink path="/team" text="Our Team" @click="closeMenu"></NavLink>
-                <NavLink path="/contact" text="Contact" @click="closeMenu"></NavLink>
+                <NavLink path="/" text="About" @click="closeMenu"></NavLink>
+                <NavLink path="/" text="Our Team" @click="closeMenu"></NavLink>
+                <NavLink path="/" text="Contact" @click="closeMenu"></NavLink>
 
                 <SignupButton buttonText="Sign Up"/>
                 <LoginButton/>
