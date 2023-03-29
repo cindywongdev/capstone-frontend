@@ -43,7 +43,29 @@
                     xl:top-68
                     ">Helping feed those in need.</h2>
 
-                <SignupButton buttonText="Get Started" class="
+                <a  href="/listings" class="
+                    absolute
+                    top-52
+                    left-1/2
+                    -translate-x-1/2
+                    py-3
+                    px-6
+                    uppercase
+                    rounded-lg
+                    text-white
+                    bg-dark-green
+                    hover:bg-[#213131]
+                    transition-colors
+                    text-base
+                    shadow-xl
+                    sm:top-72
+                    sm:text-lg
+                    lg:top-76
+                    lg:left-49
+                    xl:top-[20.5rem]
+                "><button>Get Started</button></a>
+
+                <!-- <SignupButton buttonText="Get Started" class="
                     absolute
                     top-52
                     left-1/2
@@ -56,7 +78,8 @@
                     lg:top-76
                     lg:left-49
                     xl:top-[20.5rem]
-                "/>
+                "/> -->
+
             </div>
 
             <h3 class="
