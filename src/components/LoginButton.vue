@@ -15,7 +15,11 @@ export default {
 
         return {
             login: () => {
-                loginWithRedirect()
+                loginWithRedirect({
+                    appState: {
+                        target: "/listings"
+                    }
+                })
                 console.log(window.location.origin)
             },
             user,

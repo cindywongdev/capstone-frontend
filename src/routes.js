@@ -75,6 +75,11 @@ export default [
         component: () => import('./pages/EditPage.vue'), 
         props: true 
     },
+    {
+        path: "/callback",
+        name: "callback",
+        component: () => import('./pages/CallbackPage.vue')
+    },
     { 
         path: '/:pathMatch(.*)*', 
         name: 'NotFound', 
