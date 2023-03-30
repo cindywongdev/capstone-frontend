@@ -62,8 +62,9 @@
             <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>
             <NavLink path="/listings" text="View My Listings" @click="closeMenu"></NavLink>
             <NavLink path="/listings" text="My Account" @click="closeMenu"></NavLink>
-            <LoginButton/>
-            <LogoutButton/>
+            <SignupButton v-if="!isAuthenticated" buttonText="Sign Up"/>
+            <LoginButton v-if="!isAuthenticated"/>
+            <LogoutButton v-if="isAuthenticated"/>
         </div>
 
         </div>
@@ -73,8 +74,10 @@
 <script>
 import NavLink from './NavLink.vue'
 import Logo from './Logo.vue'
+import SignupButton from './SignupButton.vue'
 import LoginButton from './LoginButton.vue'
 import LogoutButton from './LogoutButton.vue'
+import { useAuth0 } from '@auth0/auth0-vue'
 
 export default {
     name: "Nav",
@@ -83,7 +86,14 @@ export default {
     Logo,
     LoginButton,
     LogoutButton
-},
+    },
+    setup(){
+        const { isAuthenticated } = useAuth0()
+
+        return {
+            isAuthenticated
+        }
+    },
     data: function(){
         return {
             isActive: true,
