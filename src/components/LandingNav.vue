@@ -60,6 +60,7 @@
                 lg:w-7/12
                 lg:h-32
             " v-bind:class="{ 'hidden': isActive }">
+                <NavLink path="/listings" text="View Listings" @click="closeMenu"></NavLink>
                 <NavLink path="/" text="About" @click="closeMenu"></NavLink>
                 <NavLink path="/" text="Our Team" @click="closeMenu"></NavLink>
                 <NavLink path="/" text="Contact" @click="closeMenu"></NavLink>
