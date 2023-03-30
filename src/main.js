@@ -17,7 +17,7 @@ const router = createRouter({
 // get variables from env
 const { VITE_AUTH0_DOMAIN, VITE_AUTH0_CLIENT_ID, VITE_AUTH0_CALLBACK_URL } = import.meta.env
 
-console.log("callback url", VITE_AUTH0_CALLBACK_URL, window.location.origin + '/callback')
+console.log("callback url", VITE_AUTH0_CALLBACK_URL, window.location.origin + '')
 
 // create vue app
 createApp(App)
@@ -29,7 +29,7 @@ createApp(App)
         domain: VITE_AUTH0_DOMAIN,
         clientId: VITE_AUTH0_CLIENT_ID,
         authorizationParams: {
-            redirect_uri: window.location.origin + '/callback'
+            redirect_uri: window.location.origin
         }
     })
 )
