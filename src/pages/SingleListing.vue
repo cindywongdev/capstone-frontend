@@ -190,7 +190,7 @@ export default {
             // update all listings page
             await getListings.value()
             // redirect
-            router.push("/")
+            router.push("/listings")
         }
   
         console.log("all listing", listings)

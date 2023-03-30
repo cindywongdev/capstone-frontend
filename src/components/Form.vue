@@ -257,7 +257,7 @@ if (route.name === "edit") {
         // update all listings
         await getListings.value()
         // redirect to listings
-        router.push("/")
+        router.push("/listings")
     }
 }
 
