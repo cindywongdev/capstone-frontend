@@ -1,6 +1,8 @@
 <template>
     <div>
-        <button @click="login">Log In</button>
+        <button @click="login" class="
+            whitespace-nowrap
+        ">Log In</button>
         <pre v-if="isAuthenticated">{{ user.name }}</pre>
     </div>
 </template>

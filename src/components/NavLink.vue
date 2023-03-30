@@ -8,6 +8,7 @@
         ring-offset-white
         hover:opacity-70
         transition-opacity
+        whitespace-nowrap
     ">{{ text }}</router-link>
 </template>
 

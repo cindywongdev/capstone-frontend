@@ -52,10 +52,11 @@
             h-fit
             lg:flex
             lg:flex-row
+            lg:gap-6
             lg:static
             lg:shadow-none
-            lg:justify-between
-            lg:w-7/12
+            lg:justify-items-between
+            lg:max-w-3/4
             lg:h-32
         " v-bind:class="{ 'hidden': isActive }">
             <NavLink path="/listings" text="Home" @click="closeMenu"></NavLink>
@@ -85,7 +86,8 @@ export default {
     NavLink,
     Logo,
     LoginButton,
-    LogoutButton
+    LogoutButton,
+    SignupButton
     },
     setup(){
         const { isAuthenticated } = useAuth0()
