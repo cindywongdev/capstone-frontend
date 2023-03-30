@@ -35,13 +35,15 @@ export default [
         path: "/", 
         component: () => import('./pages/LandingPage.vue')
     },
+    {
+        path: "/signup",
+        name: "signup",
+        component: () => import('./pages/SignupPage.vue')
+    },
     { 
         path: "/listings", 
         component: () => import('./pages/AllListings.vue'), 
         props: true,
-        beforeEnter: (to, from) => {
-            
-        }
     },
     { 
         path: "/listing/:id", 

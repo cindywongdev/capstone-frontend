@@ -1,15 +1,15 @@
 <template>
     <button @click="signup" class="
-        rounded-lg
-        py-2
-        px-4
-        text-white
-        bg-dark-green
-        hover:bg-[#213131]
-        transition-colors
-        text-base
-        shadow-xl
-    ">
+            rounded-lg
+            py-2
+            px-4
+            text-white
+            bg-dark-green
+            hover:bg-[#213131]
+            transition-colors
+            text-base
+            shadow-xl
+        ">
         {{ buttonText }}
     </button>
 </template>
@@ -21,19 +21,23 @@ export default {
     props: {
         'buttonText': String
     },
-    setup(){
-        const { loginWithRedirect} = useAuth0()
+    setup() {
+        const { loginWithRedirect } = useAuth0()
 
         return {
             signup: () => {
-                loginWithRedirect({ action: 'signup' })
-                console.log(window.location.origin)
+                loginWithRedirect({ 
+                    appState: {
+                        target: "/listings"
+                        // target: "/signup"
+                    },
+                    authorizationParams: {
+                    screen_hint: "signup",
+                } })
             }
         }
     }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
