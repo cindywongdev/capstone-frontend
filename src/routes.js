@@ -2,8 +2,7 @@
 // Components Imports
 /////////////////////////
 // no need, dynamically import them below
-import isAuthenticated from '../src/components/LoginButton.vue'
-console.log("imported auth", isAuthenticated)
+import { authGuard } from "@auth0/auth0-vue"
 
 // import base url using import.meta.env obj
 const { VITE_API_BASE_URL } = import.meta.env
@@ -44,6 +43,7 @@ export default [
         path: "/listings", 
         component: () => import('./pages/AllListings.vue'), 
         props: true,
+        // beforeEnter: authGuard,
     },
     { 
         path: "/listing/:id", 
