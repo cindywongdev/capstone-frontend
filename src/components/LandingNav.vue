@@ -65,9 +65,9 @@
                 <NavLink path="/" text="Our Team" @click="closeMenu"></NavLink>
                 <NavLink path="/" text="Contact" @click="closeMenu"></NavLink>
 
-                <SignupButton buttonText="Sign Up"/>
-                <LoginButton/>
-                <LogoutButton/>
+                <SignupButton v-if="!isAuthenticated" buttonText="Sign Up"/>
+                <LoginButton v-if="!isAuthenticated"/>
+                <LogoutButton v-if="isAuthenticated"/>
                 
                 <!-- <fb:login-button 
                 scope="public_profile,email"
@@ -84,6 +84,7 @@ import Logo from './Logo.vue'
 import LoginButton from './LoginButton.vue'
 import LogoutButton from './LogoutButton.vue'
 import SignupButton from './SignupButton.vue'
+import { useAuth0 } from '@auth0/auth0-vue'
 
 export default {
     name: "Nav",
@@ -93,6 +94,13 @@ export default {
         LoginButton,
         LogoutButton,
         SignupButton
+    },
+    setup(){
+        const { isAuthenticated } = useAuth0()
+
+        return {
+            isAuthenticated
+        }
     },
     data: function () {
         return {
