@@ -43,7 +43,7 @@
                     xl:top-68
                     ">Helping feed those in need.</h2>
 
-                <a  href="/listings" class="
+                <router-link to="/listings" class="
                     absolute
                     top-52
                     left-1/2
@@ -61,9 +61,9 @@
                     sm:top-72
                     sm:text-lg
                     lg:top-76
-                    lg:left-49
+                    lg:left-46
                     xl:top-[20.5rem]
-                "><button>Get Started</button></a>
+                "><button>Get Started</button></router-link>
 
                 <!-- <SignupButton buttonText="Get Started" class="
                     absolute
