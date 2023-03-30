@@ -62,7 +62,7 @@
             <NavLink path="/listings" text="Home" @click="closeMenu"></NavLink>
             <NavLink path="/create" text="Create New Listing" @click="closeMenu"></NavLink>
             <NavLink path="/listings" text="View My Listings" @click="closeMenu"></NavLink>
-            <NavLink path="/listings" text="My Account" @click="closeMenu"></NavLink>
+            <NavLink path="/account" text="My Account" @click="closeMenu"></NavLink>
             <SignupButton v-if="!isAuthenticated" buttonText="Sign Up"/>
             <LoginButton v-if="!isAuthenticated"/>
             <LogoutButton v-if="isAuthenticated"/>

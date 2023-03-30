@@ -71,6 +71,11 @@ export default [
         //     }
         // }
     },
+    {
+        path: "/account",
+        name: "account",
+        component: () => import('./pages/Account.vue')
+    },
     { 
         path: "/create", 
         component: () => import('./pages/NewPage.vue'), 

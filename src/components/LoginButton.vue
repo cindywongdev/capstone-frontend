@@ -14,6 +14,7 @@ export default {
     setup(){
         const { loginWithRedirect, user, isAuthenticated } = useAuth0()
         console.log("Login Auth:", isAuthenticated)
+        console.log("user:", user)
 
         return {
             login: () => {
@@ -22,7 +23,6 @@ export default {
                         target: "/listings"
                     }
                 })
-                console.log(window.location.origin)
             },
             user,
             isAuthenticated

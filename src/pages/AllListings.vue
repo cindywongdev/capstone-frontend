@@ -1,5 +1,10 @@
 <template>
     <div class="max-w-3xl container mx-auto p-4 md:p-8">
+        <template v-if="isAuthenticated">
+            <div class="text-center px-3 my-4 text-2xl lg:text-start">
+                <h1>Hello, {{ user.name }}.</h1>
+            </div>
+        </template>
         <div class="
             flex
             justify-between
@@ -37,6 +42,9 @@
 
 <script setup>
 import ListingCard from '../components/ListingCard.vue'
+import { useAuth0 } from '@auth0/auth0-vue';
+
+const { isAuthenticated, user } = useAuth0()
 
 const props = defineProps({
     listings: Array
