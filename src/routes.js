@@ -4,22 +4,6 @@
 // no need, dynamically import them below
 import { authGuard } from "@auth0/auth0-vue"
 
-// import base url using import.meta.env obj
-const { VITE_API_BASE_URL } = import.meta.env
-const url = VITE_API_BASE_URL
-
-
-// create method to get listings
-const getListings = async function(){
-    const response = await fetch(url)
-    const data = await response.json()
-    const listings = await data
-    console.log("listings from routes.js", listings)
-    return listings
-}
-
-const listings = getListings()
-
 /////////////////////////
 // Array of Routes
 /////////////////////////

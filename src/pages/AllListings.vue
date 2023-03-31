@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-3xl container mx-auto p-4 md:p-8">
         <template v-if="isAuthenticated">
-            <div class="text-center px-3 my-4 text-2xl lg:text-start">
+            <div class="text-center px-3 my-4 text-2xl text-dark-green">
                 <h1>Hello, {{ user.name }}.</h1>
             </div>
         </template>
