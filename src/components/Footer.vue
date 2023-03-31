@@ -1,20 +1,34 @@
 <template>
     <footer class="text-gray-600 body-font w-full">
         <div
-            class="container px-5 py-8 pb-12 sm:py-12 md:py-20 lg:py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            class="container px-5 py-8 pb-12 sm:py-12 md:py-20 lg:py-24 mx-auto flex md:items-center lg:items-center md:flex-row md:flex-nowrap flex-wrap flex-col">
             <div class="w-64 flex-shrink-0 md:mx-0 text-left">
                 <a class="flex title-font font-medium items-center justify-start text-gray-900">
                     <Logo/>
                     <span class="ml-0 text-xl lg:hidden">Leftover</span>
                 </a>
-                <p class="mt-2 px-4 text-sm text-gray-500">From excess to access: Helping feed those in need.</p>
+                <p class="mt-2 px-4 text-sm text-gray-500">This website was created by Cindy Wong. Check out her links!</p>
             </div>
-            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 text-left ">
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 text-left md:justify-end lg:">
                 <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                     <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">LINKS</h2>
                     <nav class="list-none mb-10">
                         <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                            <a href="https://github.com/cindywongdev" target="_blank" rel="noreferrer noopener" class="text-gray-600 hover:text-gray-800">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/cindywongdev/" target="_blank" rel="noreferrer noopener" class="text-gray-600 hover:text-gray-800">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/cindywongdev/capstone-frontend" target="_blank" rel="noreferrer noopener" class="text-gray-600 hover:text-gray-800">Leftover Repo</a>
+                        </li>
+                    </nav>
+                </div>
+                <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">NAVIGATION</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="https://github.com/cindywongdev/capstone-frontend" target="_blank" rel="noreferrer noopener" class="text-gray-600 hover:text-gray-800">Leftover Repo</a>
                         </li>
                         <li>
                             <a class="text-gray-600 hover:text-gray-800">Second Link</a>
@@ -60,24 +74,7 @@
                             <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
                         </li>
                     </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="bg-gray-100">
