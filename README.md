@@ -14,7 +14,9 @@ Leftover is a win-win solution for restaurants and the community. Restaurants ca
 
 Join the Leftover community today and help us make a difference in the fight against hunger. -->
 
-[Leftover Deployed Site]()
+[Leftover Deployed Site](https://leftover.vercel.app/)
+
+[Backend Repo](https://github.com/cindywongdev/capstone-backend)
 
 #### Technologies Used
 
