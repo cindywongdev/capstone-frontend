@@ -119,7 +119,7 @@
                 lg:max-w-lg
                 ">
                 <div>
-                    <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
+                    <img src="../assets/dish-green.png" alt="icon of plate and utensils" class="
                         w-20
                         lg:w-24
                         "/>
@@ -165,7 +165,7 @@
                 lg:max-w-md
                 ">
                 <div>
-                    <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
+                    <img src="../assets/food-waste-green.png" alt="icon of trash can and food waste" class="
                         w-20
                         lg:w-24
                         "/>
