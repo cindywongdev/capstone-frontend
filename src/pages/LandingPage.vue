@@ -120,8 +120,8 @@
                 ">
                 <div>
                     <img src="../assets/dish-green.png" alt="icon of plate and utensils" class="
-                        w-20
-                        lg:w-24
+                        w-24
+                        lg:w-28
                         "/>
                 </div>
                 <h1 class="
