@@ -166,8 +166,8 @@
                 ">
                 <div>
                     <img src="../assets/food-waste-green.png" alt="icon of trash can and food waste" class="
-                        w-[6.5rem]
-                        lg:w-24
+                        w-26
+                        lg:w-30
                         "/>
                 </div>
                 <h1 class="
