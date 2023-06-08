@@ -92,6 +92,7 @@
             </h3>
         </section>
 
+        <a id="about"></a>
         <section aria-label="our qualities" class="
             grid
             gap-12

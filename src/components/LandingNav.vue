@@ -57,13 +57,13 @@
                 lg:static
                 lg:shadow-none
                 lg:justify-between
-                lg:w-7/12
+                lg:w-1/3
                 lg:h-32
             " v-bind:class="{ 'hidden': isActive }">
                 <NavLink path="/listings" text="View Listings" @click="closeMenu"></NavLink>
-                <NavLink path="/" text="About" @click="closeMenu"></NavLink>
+                <!-- <NavLink path="#about" v-scroll-to="'#about'" text="About" @click="closeMenu"></NavLink>
                 <NavLink path="/" text="Our Team" @click="closeMenu"></NavLink>
-                <NavLink path="/" text="Contact" @click="closeMenu"></NavLink>
+                <NavLink path="/" text="Contact" @click="closeMenu"></NavLink> -->
 
                 <SignupButton v-if="!isAuthenticated" buttonText="Sign Up"/>
                 <LoginButton v-if="!isAuthenticated"/>
