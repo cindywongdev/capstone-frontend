@@ -1,12 +1,12 @@
 <template>
     <div class="relative">
-        <LandingNav/>
+        <LandingNav />
         <section aria-label="image header" class="relative">
             <img src="../assets/beef-noodle-soup.jpg" alt="a bowl of beef noodle soup" class="
                 w-full
                 max-h-screen
                 object-cover
-            "/>
+            " />
 
             <div class="container flex-col gap-12">
                 <h1 class="
@@ -25,7 +25,7 @@
                     lg:left-72
                     lg:text-left
                     xl:top-32
-                    ">From Excess<br/>to Access</h1>
+                    ">From Excess<br />to Access</h1>
 
                 <h2 class="
                     absolute
@@ -65,7 +65,7 @@
                     xl:top-[20.5rem]
                 "><button>Get Started</button></router-link> -->
 
-                <SignupButton buttonText="Get Started" class="
+                <!-- <SignupButton buttonText="Get Started" class="
                     absolute
                     top-52
                     left-1/2
@@ -78,7 +78,29 @@
                     lg:top-76
                     lg:left-49
                     xl:top-[20.5rem]
-                "/>
+                "/> -->
+                <NavLink path="/listings" text="Get Started" @click="closeMenu" class="
+                    absolute
+                    top-52
+                    left-1/2
+                    -translate-x-1/2
+                    py-3
+                    px-6
+                    uppercase
+                    rounded-xl
+                    text-white
+                    bg-dark-green
+                    hover:bg-[#213131]
+                    hover:opacity-100
+                    transition-colors
+                    text-base
+                    shadow-xl
+                    sm:top-72
+                    sm:text-lg
+                    lg:top-76
+                    lg:left-49
+                    xl:top-[20.5rem]
+                "></NavLink>
 
             </div>
 
@@ -88,7 +110,10 @@
                 right-0
                 text-xs
                 text-neutral-800
-            ">Photo by <a href="https://unsplash.com/de/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Hanaoka</a> on <a href="https://unsplash.com/photos/_q4AQcGX28A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            ">Photo by <a
+                    href="https://unsplash.com/de/@plhnk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul
+                    Hanaoka</a> on <a
+                    href="https://unsplash.com/photos/_q4AQcGX28A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </h3>
         </section>
 
@@ -123,7 +148,7 @@
                     <img src="../assets/dish-green.png" alt="icon of plate and utensils" class="
                         w-24
                         lg:w-28
-                        "/>
+                        " />
                 </div>
                 <h1 class="
                     font-semibold
@@ -132,7 +157,8 @@
                 ">Find Local Donations</h1>
                 <p class="
                     text-lg
-                    ">Locate nearby food donations and arrange pickup for yourself or <br class="lg:hidden"/>your organization.</p>
+                    ">Locate nearby food donations and arrange pickup for yourself or <br class="lg:hidden" />your
+                    organization.</p>
             </div>
 
             <div class="
@@ -146,7 +172,7 @@
                     <img src="../assets/hand-heart-green.png" alt="icon of hand holding a heart" class="
                         w-20
                         lg:w-24
-                        "/>
+                        " />
                 </div>
                 <h1 class="
                     font-semibold
@@ -155,7 +181,8 @@
                 ">Donate Surplus Food</h1>
                 <p class="
                     text-lg
-                    ">List excess available food on the app, and nearby groups or individuals <br class="lg:hidden"/>can arrange pickup.</p>
+                    ">List excess available food on the app, and nearby groups or individuals <br
+                        class="lg:hidden" />can arrange pickup.</p>
             </div>
 
             <div class="
@@ -169,7 +196,7 @@
                     <img src="../assets/food-waste-green.png" alt="icon of trash can and food waste" class="
                         w-26
                         lg:w-30
-                        "/>
+                        " />
                 </div>
                 <h1 class="
                     font-semibold
@@ -178,15 +205,16 @@
                 ">Reduce Food Waste</h1>
                 <p class="
                     text-lg
-                    ">Help reduce food waste and minimize the environmental impact <br class="lg:hidden"/>of discarded food.</p>
+                    ">Help reduce food waste and minimize the environmental impact <br class="lg:hidden" />of discarded
+                    food.</p>
             </div>
-            
+
             <SignupButton buttonText="Sign Up" class="
             py-3
             px-9
             uppercase
             sm:text-lg
-            "/>
+            " />
         </section>
     </div>
 </template>
@@ -194,8 +222,7 @@
 <script setup>
 import LandingNav from '../components/LandingNav.vue';
 import SignupButton from '../components/SignupButton.vue';
+import NavLink from '../components/NavLink.vue'
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
