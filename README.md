@@ -24,7 +24,6 @@ Join the Leftover community today and help us make a difference in the fight aga
 - Python
 - Django
 - PostgreSQL
-- Food API (Edamam or Spoonacular probably)
 - Jira
 - Auth0
 <!-- possible APIs
