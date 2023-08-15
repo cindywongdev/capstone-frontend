@@ -79,7 +79,7 @@
                     lg:left-49
                     xl:top-[20.5rem]
                 "/> -->
-                <NavLink path="/listings" text="Get Started" @click="closeMenu" class="
+                <!-- <NavLink path="/listings" text="Get Started" class="
                     absolute
                     top-52
                     left-1/2
@@ -100,7 +100,29 @@
                     lg:top-76
                     lg:left-49
                     xl:top-[20.5rem]
-                "></NavLink>
+                "></NavLink> -->
+
+                <router-link :to="'/listings'" class="
+                    absolute
+                    top-52
+                    left-1/2
+                    -translate-x-1/2
+                    py-3
+                    px-6
+                    uppercase
+                    rounded-xl
+                    text-white
+                    bg-dark-green
+                    hover:bg-[#213131]
+                    transition-colors
+                    text-base
+                    shadow-xl
+                    sm:top-72
+                    sm:text-lg
+                    lg:top-76
+                    lg:left-49
+                    xl:top-[20.5rem]
+                ">Get Started</router-link>
 
             </div>
 
