@@ -66,8 +66,8 @@ flowchart TD
 |      /       | Index   |indexLoader|          | Loads up all food listings                        |
 | /listing/:id | Show    |listingLoader|        | Loads up a specific food listing                  |
 | /create      | Create  |       | listingCreateAction | Handle submission of a create form for listings  |
-| /update/:id  | Create  |       | listingUpdateAction | Handle submission of an update form for listings |
-| /delete/:id  | Create  |       | listingDeleteAction | Handle submission of a delete form for listings  |
+| /update/:id  | Update  |       | listingUpdateAction | Handle submission of an update form for listings |
+| /delete/:id  | Delete  |       | listingDeleteAction | Handle submission of a delete form for listings  |
 
 #### User Stories
 ##### Provider Accounts
